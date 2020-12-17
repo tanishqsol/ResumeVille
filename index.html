@@ -78,8 +78,8 @@
 
                 <!-- <div class="introBox"> -->
 
-                    <img src="https://i.ibb.co/WfyyVQZ/wel-Res-Vill.png"
-                         class="resumeVille">
+                <img src="https://i.ibb.co/WfyyVQZ/wel-Res-Vill.png"
+                     class="resumeVille">
 
                 <!-- </div> -->
                 <img src="https://i.ibb.co/GP01C2d/edu-White-Up.png"
@@ -294,16 +294,19 @@
             smoothScrollingDuration: 200
         });
     </script>
-<script>
-    $(document).ready(function(){
-       $(window).scrollTop(0);
-   });
-   </script>
+    <script>
+        $(document).ready(function () {
+            $(window).scrollTop(0);
+        });
+    </script>
     <script src="app.js"></script>
     <script src="app2.js"></script>
     <script>
-
+        if (screen.width <= 700) {
+            document.location = "sample.html"
+        }
     </script>
+
 </body>
 
 </html>
