@@ -23,9 +23,11 @@ width: 100%;
 display: flex;
 }
 .resumeVille{
-    width:90%;
-    height:100%;
-    padding-top: 180px;
+    position: absolute;
+    width:50%;
+    height:90%;
+    bottom:10px;
+    // padding-top: 180px;
 }
 
 .laptop{
@@ -49,7 +51,7 @@ z-index: 1;
     height: 70%;
     width: 30%;
     bottom: 40%;
-    left:10%;
+    left:30%;
     .orangeBox{
         position: absolute;
         height: 50%;
@@ -70,7 +72,7 @@ z-index: 1;
         position: absolute;
         color: white;
         left:23%;
-        top:20%;
+        top:10%;
         // font-size: 90px;
     }
     .page6{
@@ -97,15 +99,17 @@ z-index: 1;
     // justify-content: center;
     font-family: 'Bulletto';
     left:30%;
-    top:40%;
-  position: absolute;
+    // top:40%;
+     position: absolute;
     margin: 60px auto;
-    height: 100%;
+    // height: 100%;
     width: 50%;
+    bottom: 40%;
     // transform: scaleX(-0.5);
     color: white;
     list-style: none;
     // flex-direction: column;
+    // border: 1px solid black;
 }
 .mySkillsOne li{
     margin: 20px 0;
