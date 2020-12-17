@@ -107,7 +107,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     };
 
 });
-
+window.onload = function () {
+    if (screen.width <= 700) {
+        document.location = "sample.html"
+    }
+}
 // var road_class = $(".lines");
 // var girl_class = $(".viewer");
 
