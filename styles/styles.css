@@ -1,0 +1,454 @@
+@import url(//db.onlinewebfonts.com/c/eae2b93d0cd03a5008773407905e0166?family=Bulletto+Killa);
+.header {
+  color: white;
+  font-size: 50px;
+}
+
+.section {
+  height: 800px;
+  background: #293744;
+  position: fixed;
+  color: #899eb5;
+}
+
+.scene {
+  height: 100%;
+  width: 100%;
+  background: #EAEAEA;
+  position: fixed;
+}
+
+.character {
+  position: fixed;
+  z-index: 19;
+  width: 100%;
+  bottom: 0px;
+  height: 207px;
+}
+
+.viewer {
+  height: 227px;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right: 122px;
+  max-width: calc(15593px/120);
+  background-image: url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  z-index: 11;
+  bottom: 0;
+  -webkit-animation: animateGirlForward steps(6) 1;
+          animation: animateGirlForward steps(6) 1;
+}
+
+.viewer_back {
+  height: 227px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  position: absolute;
+  margin-left: 40%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right: 122px;
+  max-width: calc(-15593px/120);
+  background-image: url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  z-index: 11;
+  bottom: 0;
+}
+
+.road {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100px;
+  background: #525252;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+  bottom: 0px;
+}
+
+.lines {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  width: 100%;
+  -webkit-transform: rotateX(2deg) perspective(190px);
+          transform: rotateX(2deg) perspective(190px);
+  height: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(70%, #fff), color-stop(70%, #525252), to(#525252));
+  background: linear-gradient(90deg, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
+  background-size: 120px;
+}
+
+#wrapper {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  z-index: 0;
+  top: 0;
+}
+
+#clouds {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/bg-clouds2-tinypng.png") repeat-x 0 bottom #ACE6FF;
+  width: 100%;
+  height: 120px;
+  /*190px*/
+  position: absolute;
+  top: 0;
+  background-repeat: repeat-x;
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0.01);
+  transform: translate3d(0, 0, 0.01);
+}
+
+.grass {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/grass_tile-tinypng.png") repeat-x transparent;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 200px;
+  border: 0 none transparent;
+  outline: 0 none transparent;
+  -webkit-transform: translate3d(0, 0, 0.01);
+  transform: translate3d(0, 0, 0.01);
+  will-change: transform;
+}
+
+.house1 {
+  bottom: 85px;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.hill1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hill2 {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  z-index: 9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #63D0FF;
+  font-family: 'Bulletto';
+}
+
+.main-container {
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resumeVille {
+  width: 90%;
+  height: 100%;
+  padding-top: 180px;
+}
+
+.laptop {
+  height: 100%;
+  width: 100%;
+}
+
+.introBox {
+  position: absolute;
+  bottom: 10px;
+  height: 100%;
+  width: 50%;
+  left: 30%;
+  z-index: 1;
+}
+
+.orangeBoxDiv {
+  position: absolute;
+  z-index: 10;
+  height: 70%;
+  width: 30%;
+  bottom: 40%;
+  left: 10%;
+}
+
+.orangeBoxDiv .orangeBox {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 50%;
+}
+
+.main-container section {
+  min-width: 100%;
+  max-width: 200%;
+  height: 100vh;
+  background-color: #63D0FF;
+  position: relative;
+}
+
+.main-container section .multiSkills {
+  position: absolute;
+  color: white;
+  left: 23%;
+  top: 20%;
+}
+
+.main-container section .page6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box {
+  position: absolute;
+  width: 50%;
+  height: 260px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mySkillsOne {
+  font-family: 'Bulletto';
+  left: 30%;
+  top: 40%;
+  position: absolute;
+  margin: 60px auto;
+  height: 100%;
+  width: 50%;
+  color: white;
+  list-style: none;
+}
+
+.mySkillsOne li {
+  margin: 20px 0;
+}
+
+.bar {
+  background: #ffffff49;
+  display: block;
+  height: 9px;
+  border: 1px solid rgba(121, 57, 57, 0.137);
+  overflow: hidden;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px #2187e7b3;
+          box-shadow: 0 0 10px #2187e7b3;
+}
+
+.bar span {
+  height: 9px;
+  float: left;
+  background: #ff0000;
+}
+
+.progress_animated_des {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 90%;
+}
+
+.progress_animated_ill {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 80%;
+}
+
+.progress_animated_cod {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 68%;
+}
+
+.progress_animated_ani {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 85%;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    width: 0%;
+  }
+}
+
+@keyframes anim {
+  0% {
+    width: 0%;
+  }
+}
+
+.hillLanding {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  z-index: 0;
+}
+
+.village {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+  opacity: 1;
+  background-image: url("https://i.ibb.co/jbGvQ3L/Villages2.png");
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+#gradCap {
+  position: absolute;
+  bottom: 25%;
+  z-index: 2;
+  opacity: 0;
+  left: 30%;
+}
+
+.eduMile {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+}
+
+.skillMile {
+  position: absolute;
+  bottom: 90px;
+  right: 0%;
+  z-index: 10;
+}
+
+#experience {
+  position: absolute;
+  width: 50%;
+  height: 260px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  bottom: 25%;
+  opacity: 1;
+}
+
+.pole1 {
+  height: 100%;
+  left: 5%;
+  bottom: 0;
+  width: 8%;
+  position: absolute;
+  z-index: 2;
+}
+
+.pole2 {
+  height: 100%;
+  right: 5%;
+  bottom: 0;
+  width: 8%;
+  position: absolute;
+}
+
+#progSkillsText {
+  position: absolute;
+  left: 15%;
+  top: 55%;
+  opacity: 0;
+}
+
+#progSkillsBanner {
+  position: absolute;
+  top: 0%;
+  height: 50%;
+  width: 30%;
+  opacity: 0;
+}
+
+#progSkillBanner_animate {
+  position: absolute;
+  top: 0%;
+  height: 50%;
+  width: 30%;
+  -webkit-animation: banner1 0.5s ease-out;
+          animation: banner1 0.5s ease-out;
+  opacity: 1;
+}
+
+@-webkit-keyframes banner1 {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 60%;
+  }
+  100% {
+    opacity: 1;
+    height: 50%;
+  }
+}
+
+@keyframes banner1 {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 60%;
+  }
+  100% {
+    opacity: 1;
+    height: 50%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
