@@ -35,11 +35,11 @@
   max-width:  calc(15593px/120);
   // width:  100%;
   background-image:url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
-  background-repeat:repeat-x;
+  background-repeat:no-repeat;
   background-position: 0 50%;
   z-index: 11;
-  bottom:0;
-  animation: animateGirlForward steps(6) 1 ;
+  bottom:65px;
+  // animation: animateGirlForward steps(6) 1 ;
 }
 
 .viewer_back {
@@ -50,19 +50,42 @@
   margin-left: 40%;
   margin-top: auto;
   margin-right: auto;
-  // padding-left:96px ;
+  // padding-left: ;
   padding-right:122px ;
-  max-width:  calc(-15593px/120);
+  max-width:  calc(16593px/120);
   // max-width:  calc(15593px/90);
   // width:  100%;
   background-image:url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
   // background-image:url("https://i.ibb.co/thkBzyc/stripe-Final-Back.png");
-  background-repeat:repeat-x;
+  background-repeat:no-repeat;
   background-position: 0 50%;
+  // border:1px solid black;
   z-index: 11;
-  bottom:0;
+  bottom:65px;
 }
+// .foothPath{
+//   width: 100%;
+//   z-index: 11;
+// }
 
+.foothPath{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height:100px;
+  // background: #525252;
+  background-image: url("https://i.ibb.co/LpFTkm5/finalfinalfinal-Footpath.png");
+  background-repeat: repeat-x;
+  // background-size: contain;
+  // transform-origin:bottom;
+  // transform-style:preserve-3d;
+  // transform: rotateX(20deg);
+  bottom: 50px;
+  left: 0;
+  background-position: 20px;
+  // background-size:1420px ;
+  // border:1px solid black;
+}
 .road{
   position: absolute;
   z-index: 10;
@@ -75,16 +98,49 @@
   bottom: 0px;
   // border:1px solid black;
 }
+.roadAbove{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height:50px;
+  border: 2px solid rgb(102, 97, 57);
+  background: #646464;
+  // background-image: url("https://i.ibb.co/Jys7c7G/sideroad.jpg");
+  // background-repeat: repeat-x;
+  background-size: contain;
+  transform-origin:bottom;
+  transform-style:preserve-3d;
+  transform:  perspective (120px) rotateX(20deg);
+  bottom: 100px;
+  
+}
+.railings{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height:100%;
+  // border: 2px solid rgb(102, 97, 57);
+  // background: #646464;
+  background-image: url("https://i.ibb.co/tKYYSX8/Untitled-3raillong.png");
+  background-repeat: repeat-x;
+  // background-size: contain;
+  transform-origin:bottom;
+  transform-style:preserve-3d;
+  background-position:90px;
+  // transform:  perspective (120px) rotateX(20deg);
+  bottom: 85px;
+  // transform: scaleY(100px);
+}
 .lines{
   content:'';
   position: absolute;
   top:50%;
   left:0;
-  transform:  translateY(-30%);
+  // transform:  translateY(-30%);
   width:100%;
   transform: rotateX(2deg) perspective(190px);
   height: 10px;
-  background: linear-gradient(90deg,#fff 0%,#fff 70%,#525252 70%,#525252 100%);
+  background: linear-gradient(90deg,#fff 10%,#fff 70%,#525252 70%,#525252 100%);
   background-size:120px ;
   
 }

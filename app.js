@@ -38,6 +38,7 @@ var frame_count = 120,
     offset_value = 100;
 gsap.to(girl_class, {
     backgroundPosition: "+=" + backPos,
+    immediateRender: true,
     ease: "steps(" + frame_count + ")", // use a stepped ease for the sprite sheet
     scrollTrigger: {
         trigger: ".main-container",
@@ -62,7 +63,7 @@ gsap.to(".lines", {
 var frame_grass = 12,
     offset_value_grass = 100;
 gsap.to(".grass", {
-    backgroundPosition: "-3190px",
+    backgroundPosition: "-3990px",
     autoRound: false,
     scrollTrigger: {
         trigger: ".main-container",
@@ -72,6 +73,32 @@ gsap.to(".grass", {
     }
 });
 
+var frame_footPath = 12,
+    offset_value_foothPath = 100;
+gsap.to(".foothPath", {
+    backgroundPosition: "-3990px",
+    // x:100,
+    autoRound: false,
+    scrollTrigger: {
+        trigger: ".main-container",
+        start: "top top",
+        end: "+=" + (frame_footPath * offset_value_foothPath * 50),
+        scrub: 0.5
+    }
+});
+var frame_footPath = 12,
+    offset_value_foothPath = 100;
+gsap.to(".railings", {
+    backgroundPosition: "-3990px",
+    // x:100,
+    autoRound: false,
+    scrollTrigger: {
+        trigger: ".main-container",
+        start: "top top",
+        end: "+=" + (frame_footPath * offset_value_foothPath * 50),
+        scrub: 0.5
+    }
+});
 TweenMax.from(".orangeBoxDiv", 1, { x: -1500, ease: Expo.easeOut, delay: 0.5 });
 
 document.addEventListener("DOMContentLoaded", function (event) {

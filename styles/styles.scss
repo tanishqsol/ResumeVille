@@ -1,5 +1,8 @@
 @import "./girlAnimate";
 @import "./grassClouds";
+@import"./mainContainer";
+@import"./skills";
+@import"./education";
 @import url(//db.onlinewebfonts.com/c/eae2b93d0cd03a5008773407905e0166?family=Bulletto+Killa);
 *{
     margin: 0;
@@ -8,31 +11,17 @@
 }
 
 body{
-    background-color:  #63D0FF;
+    background-color:  #5961668f;
+            // background-image: url("https://i.ibb.co/ZzzfS66/christmas-Village-Transparent.png");
+            // background-position: center;
+            background-image: url("https://i.ibb.co/hy6VHW1/yoyoyoyo34.png");
+            background-position:center;
+            background-size: cover;
+            background-repeat: repeat-x;
+            background-attachment: fixed;
+
     font-family: 'Bulletto';
 
-}
-
-.main-container{
-    // border: 1px solid black;
-    background-color: yellow;
-    position: fixed;
-top:0;
-left: 0;
-width: 100%;
-display: flex;
-}
-.resumeVille{
-    position: absolute;
-    width:50%;
-    height:90%;
-    bottom:10px;
-    // padding-top: 180px;
-}
-
-.laptop{
-    height: 100%;
-    width:100%
 }
 
 .introBox
@@ -40,7 +29,6 @@ display: flex;
 bottom:10px;
 height:100%;
 width: 50%;
-// border: 1px solid black;
 left:30%;
 z-index: 1;
 }
@@ -60,101 +48,19 @@ z-index: 1;
     }
 
     }
-.main-container section{
-    min-width: 100%;
-    max-width: 200%;
-    height: 100vh;
-    background-color: #63D0FF;
-    position: relative;
 
-    // border: 1px solid black;
-    .multiSkills{
-        position: absolute;
-        color: white;
-        left:33%;
-        // top:10%;
-        // font-size: 90px;
-    }
-    .page6{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
 
-.box{
-    position: absolute;
-    width: 50%;
-    height: 260px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+// .box{
+//     position: absolute;
+//     width: 50%;
+//     height: 260px;
+//     border: 1px solid black;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+// }
 
-.mySkillsOne{
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    font-family: 'Bulletto';
-    left:30%;
-    // top:40%;
-     position: absolute;
-    margin: 60px auto;
-    // height: 100%;
-    width: 50%;
-    bottom: 40%;
-    // transform: scaleX(-0.5);
-    color: white;
-    list-style: none;
-    // flex-direction: column;
-    // border: 1px solid black;
-}
-.mySkillsOne li{
-    margin: 20px 0;
-}
-.bar{
-    background: #ffffff49;
-    // opacity: 0.5;
-    display: block;
-    height: 9px;
-    border: 1px solid rgba(121, 57, 57, 0.137);
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 0 0 10px #2187e7b3;
-
-}
-.bar span{
-    height: 9px;
-    float: left;
-    background: #ff0000;
-}
-
-.progress_animated_des{
-    animation: anim 2s ease-out;
-    width:90%;
-}
-
-.progress_animated_ill{
-    animation: anim 2s ease-out;
-    width:80%;
-}
-.progress_animated_cod{
-    animation: anim 2s ease-out;
-    width:68%;
-}
-
-.progress_animated_ani{
-    animation: anim 2s ease-out;
-    width:85%;
-}
-@keyframes anim {
-    0%{
-        width: 0%;
-    }
-
-}
 
 .hillLanding{
     position: absolute;
@@ -162,109 +68,29 @@ z-index: 1;
     right:0%;
     z-index: 0;
 }
-.village{
-    position: fixed;
-    width: 100%;
-    bottom:0;
-    height: 100%;
-    // z-index: -1;
-    opacity: 1;
-    background-image: url("https://i.ibb.co/jbGvQ3L/Villages2.png");
-    background-repeat: no-repeat;
-    opacity: 0.6;
-}
-#gradCap{
-    position:absolute;
-    bottom:25%;
-    z-index: 2;
-    opacity: 0;
-    left:30%;
-}
 
-.eduMile{
+// .page8{
+//     background-color: rgba(2, 2, 255, 0.342);
+// }
+.office{
     position: absolute;
-    bottom:90px;
-    right: 0;
-    // transform: scale(0.5);
+    bottom: 159px;
+    left:40%;
+    height:60%;
+    width:60%;
 }
-.skillMile{
+.bannerNetc{
     position: absolute;
-    bottom:90px;
-    right: 0%;
+    bottom:165px;
+    left:80%;
+    height:80%;
+    width:60%;
+}
+.expMile{
+    position: absolute;
+    bottom:140px;
+    height:38%;
+
+    left: 5%;
     z-index: 10;
-}
-#experience{
-    position: absolute;
-    width: 50%;
-    height: 260px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    bottom:25%;
-    opacity:1;
-}
-
-.pole1{
-    height: 100%;
-    left:5%;
-    bottom: 0;
-    width:8%;
-    position: absolute;
-    z-index: 2;
-    
-}
-.pole2{
-    height: 100%;
-    right:5%;
-    bottom: 0;
-    width:8%;
-    position: absolute;
-}
-
-#progSkillsText{
-   
-    position: absolute;
-    left:15%;
-    top:55%;
-    opacity: 0;
-
-}
-#progSkillsBanner{
-    position: absolute;
-    top: 0%;
-    height:50%;
-    width:30%;
-    opacity: 0;
-    
-    
-}
-#progSkillBanner_animate{
-    position: absolute;
-    top: 0%;
-    height:50%;
-    width:30%;
-    animation: banner1 0.5s ease-out ;
-    opacity: 1;
-    
-    
-   
-   
-@keyframes banner1{
-    0%{
-        height:  0px;
-      
-    }
-    50%{
-        height:60% ;
-       
-    }
-  
-    100%{
-        opacity: 1;
-        height:50% ;
-       
-    }
-}
 }

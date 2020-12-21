@@ -35,12 +35,10 @@
   padding-right: 122px;
   max-width: calc(15593px/120);
   background-image: url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   background-position: 0 50%;
   z-index: 11;
-  bottom: 0;
-  -webkit-animation: animateGirlForward steps(6) 1;
-          animation: animateGirlForward steps(6) 1;
+  bottom: 65px;
 }
 
 .viewer_back {
@@ -52,12 +50,24 @@
   margin-top: auto;
   margin-right: auto;
   padding-right: 122px;
-  max-width: calc(-15593px/120);
+  max-width: calc(16593px/120);
   background-image: url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   background-position: 0 50%;
   z-index: 11;
-  bottom: 0;
+  bottom: 65px;
+}
+
+.foothPath {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100px;
+  background-image: url("https://i.ibb.co/LpFTkm5/finalfinalfinal-Footpath.png");
+  background-repeat: repeat-x;
+  bottom: 50px;
+  left: 0;
+  background-position: 20px;
 }
 
 .road {
@@ -75,36 +85,65 @@
   bottom: 0px;
 }
 
+.roadAbove {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #666139;
+  background: #646464;
+  background-size: contain;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective 120px rotateX(20deg);
+          transform: perspective 120px rotateX(20deg);
+  bottom: 100px;
+}
+
+.railings {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.ibb.co/tKYYSX8/Untitled-3raillong.png");
+  background-repeat: repeat-x;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-position: 90px;
+  bottom: 85px;
+}
+
 .lines {
   content: '';
   position: absolute;
   top: 50%;
   left: 0;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
   width: 100%;
   -webkit-transform: rotateX(2deg) perspective(190px);
           transform: rotateX(2deg) perspective(190px);
   height: 10px;
-  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(70%, #fff), color-stop(70%, #525252), to(#525252));
-  background: linear-gradient(90deg, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #fff), color-stop(70%, #fff), color-stop(70%, #525252), to(#525252));
+  background: linear-gradient(90deg, #fff 10%, #fff 70%, #525252 70%, #525252 100%);
   background-size: 120px;
 }
 
 #wrapper {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 80%;
-  z-index: 0;
+  z-index: 1;
   top: 0;
 }
 
 #clouds {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/bg-clouds2-tinypng.png") repeat-x 0 bottom #ACE6FF;
   width: 100%;
-  height: 120px;
-  /*190px*/
-  position: absolute;
+  min-height: 190px;
+  position: fixed;
   top: 0;
   background-repeat: repeat-x;
   left: 0;
@@ -115,23 +154,20 @@
 .grass {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/grass_tile-tinypng.png") repeat-x transparent;
   position: fixed;
-  bottom: 0;
+  bottom: 45px;
   left: 0;
   z-index: 1;
   width: 100%;
   height: 200px;
   border: 0 none transparent;
   outline: 0 none transparent;
-  -webkit-transform: translate3d(0, 0, 0.01);
-  transform: translate3d(0, 0, 0.01);
-  will-change: transform;
 }
 
 .house1 {
-  bottom: 85px;
+  bottom: 195px;
   left: 0;
   position: absolute;
-  z-index: 10;
+  z-index: 40;
 }
 
 .hill1 {
@@ -148,20 +184,7 @@
   z-index: 9;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background-color: #63D0FF;
-  font-family: 'Bulletto';
-}
-
 .main-container {
-  background-color: yellow;
   position: fixed;
   top: 0;
   left: 0;
@@ -178,41 +201,10 @@ body {
   bottom: 10px;
 }
 
-.laptop {
-  height: 100%;
-  width: 100%;
-}
-
-.introBox {
-  position: absolute;
-  bottom: 10px;
-  height: 100%;
-  width: 50%;
-  left: 30%;
-  z-index: 1;
-}
-
-.orangeBoxDiv {
-  position: absolute;
-  z-index: 10;
-  height: 70%;
-  width: 30%;
-  bottom: 40%;
-  left: 30%;
-}
-
-.orangeBoxDiv .orangeBox {
-  position: absolute;
-  height: 50%;
-  width: 100%;
-  top: 50%;
-}
-
 .main-container section {
   min-width: 100%;
   max-width: 200%;
   height: 100vh;
-  background-color: #63D0FF;
   position: relative;
 }
 
@@ -234,32 +226,15 @@ body {
           justify-content: center;
 }
 
-.box {
-  position: absolute;
-  width: 50%;
-  height: 260px;
-  border: 1px solid black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.main-container section .page8 {
+  background-color: rgba(0, 0, 255, 0.308);
 }
 
 .mySkillsOne {
-  font-family: 'Bulletto';
-  left: 30%;
+  left: 20%;
   position: absolute;
   margin: 60px auto;
-  width: 50%;
+  width: 70%;
   bottom: 40%;
   color: white;
   list-style: none;
@@ -322,65 +297,12 @@ body {
   }
 }
 
-.hillLanding {
-  position: absolute;
-  bottom: 0;
-  right: 0%;
-  z-index: 0;
-}
-
-.village {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  height: 100%;
-  opacity: 1;
-  background-image: url("https://i.ibb.co/jbGvQ3L/Villages2.png");
-  background-repeat: no-repeat;
-  opacity: 0.6;
-}
-
-#gradCap {
-  position: absolute;
-  bottom: 25%;
-  z-index: 2;
-  opacity: 0;
-  left: 30%;
-}
-
-.eduMile {
-  position: absolute;
-  bottom: 90px;
-  right: 0;
-}
-
 .skillMile {
   position: absolute;
-  bottom: 90px;
+  bottom: 140px;
+  height: 35%;
   right: 0%;
   z-index: 10;
-}
-
-#experience {
-  position: absolute;
-  width: 50%;
-  height: 260px;
-  border: 1px solid black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  bottom: 25%;
-  opacity: 1;
 }
 
 .pole1 {
@@ -394,7 +316,7 @@ body {
 
 .pole2 {
   height: 100%;
-  right: 5%;
+  right: 0%;
   bottom: 0;
   width: 8%;
   position: absolute;
@@ -411,8 +333,61 @@ body {
   position: absolute;
   top: 0%;
   height: 50%;
-  width: 30%;
+  width: 50%;
   opacity: 0;
+}
+
+#animSkillsText {
+  position: absolute;
+  left: 15%;
+  top: 55%;
+  opacity: 0;
+}
+
+#animSkillsBanner {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  height: 50%;
+  width: 50%;
+  opacity: 0;
+}
+
+#animSkillBanner_animate {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  height: 50%;
+  width: 50%;
+  -webkit-animation: animBanner 0.5s ease-out;
+          animation: animBanner 0.5s ease-out;
+  opacity: 1;
+}
+
+@-webkit-keyframes animBanner {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 60%;
+  }
+  100% {
+    opacity: 1;
+    height: 50%;
+  }
+}
+
+@keyframes animBanner {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 60%;
+  }
+  100% {
+    opacity: 1;
+    height: 50%;
+  }
 }
 
 #progSkillBanner_animate {
@@ -449,5 +424,147 @@ body {
     opacity: 1;
     height: 50%;
   }
+}
+
+#graphicsSkillsBanner {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 50%;
+  width: 40%;
+  opacity: 0;
+}
+
+#graphicsSkillsText {
+  position: absolute;
+  left: 65%;
+  top: 55%;
+  opacity: 0;
+}
+
+#designSkillBanner_animate {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 50%;
+  width: 40%;
+  -webkit-animation: designAnimate 0.5s ease-out;
+          animation: designAnimate 0.5s ease-out;
+  opacity: 1;
+}
+
+@-webkit-keyframes designAnimate {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 60%;
+  }
+  100% {
+    opacity: 1;
+    height: 50%;
+  }
+}
+
+@keyframes designAnimate {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 60%;
+  }
+  100% {
+    opacity: 1;
+    height: 50%;
+  }
+}
+
+#gradCap {
+  position: absolute;
+  bottom: 25%;
+  z-index: 2;
+  opacity: 0;
+  left: 30%;
+}
+
+.eduMile {
+  position: absolute;
+  bottom: 140px;
+  height: 45%;
+  right: 0;
+  z-index: 10;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #5961668f;
+  background-image: url("https://i.ibb.co/hy6VHW1/yoyoyoyo34.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  font-family: 'Bulletto';
+}
+
+.introBox {
+  position: absolute;
+  bottom: 10px;
+  height: 100%;
+  width: 50%;
+  left: 30%;
+  z-index: 1;
+}
+
+.orangeBoxDiv {
+  position: absolute;
+  z-index: 10;
+  height: 70%;
+  width: 30%;
+  bottom: 40%;
+  left: 30%;
+}
+
+.orangeBoxDiv .orangeBox {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 50%;
+}
+
+.hillLanding {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  z-index: 0;
+}
+
+.office {
+  position: absolute;
+  bottom: 159px;
+  left: 40%;
+  height: 60%;
+  width: 60%;
+}
+
+.bannerNetc {
+  position: absolute;
+  bottom: 165px;
+  left: 80%;
+  height: 80%;
+  width: 60%;
+}
+
+.expMile {
+  position: absolute;
+  bottom: 140px;
+  height: 38%;
+  left: 5%;
+  z-index: 10;
 }
 /*# sourceMappingURL=styles.css.map */
