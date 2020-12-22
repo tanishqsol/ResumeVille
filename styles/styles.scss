@@ -39,7 +39,7 @@ z-index: 1;
     height: 70%;
     width: 30%;
     bottom: 40%;
-    left:30%;
+    left:50%;
     .orangeBox{
         position: absolute;
         height: 50%;
@@ -72,25 +72,72 @@ z-index: 1;
 // .page8{
 //     background-color: rgba(2, 2, 255, 0.342);
 // }
+@font-face {
+    font-family: myFirstFont;
+    src: url(Linotte_Bold.woff);
+ }
+ 
+ * {
+    font-family: myFirstFont;
+ }
 .office{
     position: absolute;
     bottom: 159px;
-    left:40%;
+    left:10%;
     height:60%;
     width:60%;
 }
 .bannerNetc{
     position: absolute;
     bottom:165px;
-    left:80%;
-    height:80%;
-    width:60%;
+    right:0%;
+    height:60%;
+    width:40%;
 }
 .expMile{
     position: absolute;
     bottom:140px;
     height:38%;
 
-    left: 5%;
+    left: 0%;
     z-index: 10;
 }
+.page9{
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-wrap: nowrap;
+    // flex-direction: row;
+}
+
+  .rsvProject{
+      height:300px;
+      width:600px;
+  }
+  .ruleEngProject{
+    height:300px;
+    width:600px;
+  }
+  .nfvProject{
+    height:300px;
+    width:600px;
+  }
+  .vmsProject{
+    height:300px;
+    width:600px;
+  }
+  .testingProject{
+    height:300px;
+    width:600px;
+  }
+  .projMile{
+    position: absolute;
+    bottom:140px;
+    height:45%;
+    left: 5%;
+    z-index: 10;
+    
+  }
+  .pr1,.pr2,.pr3,.pr4,.pr5{
+      opacity: 0;
+  }

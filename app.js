@@ -1,4 +1,8 @@
 console.log("my name is tanishq");
+$(window).scroll(function () {
+    var scrolled_val = $(document).scrollTop().valueOf();
+    console.log(scrolled_val + ' = scroll value');
+});
 var backPos = "-15620px";
 var scrollCount = 0;
 

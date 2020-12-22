@@ -28,7 +28,9 @@ display: flex;
     position: relative;
     .multiSkills{
         position: absolute;
+        font-size:5vh;
         color: white;
+        top:5%;
         left:33%;
     }
     .page6{
@@ -36,8 +38,27 @@ display: flex;
         align-items: center;
         justify-content: center;
     }
-    .page8{
-        background-color: rgba(0, 0, 255, 0.308);
-    }
+    
+    
+
 }
+.page9section{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+    justify-content: flex-end;
+    flex-direction: row;
+    
+}
+.page10section ,.page11section{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+// }
 

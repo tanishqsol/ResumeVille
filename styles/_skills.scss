@@ -89,9 +89,10 @@
 }
 
 #progSkillsText{
-   
+   font-size:5vh;
+   color: white;
     position: absolute;
-    left:15%;
+    left:35%;
     top:55%;
     opacity: 0;
 
@@ -109,8 +110,9 @@
 #animSkillsText{
     position: absolute;
     left:15%;
-    top:55%;
-    
+    top:50%;
+    font-size:5vh;
+   color: white;
 opacity: 0;
 }
 #animSkillsBanner{
@@ -194,7 +196,9 @@ opacity: 0;
 #graphicsSkillsText{
     position: absolute;
     left:65%;
-    top:55%;
+    top:50%;
+    font-size:5vh;
+    color: white;
     
 opacity: 0;
 }
