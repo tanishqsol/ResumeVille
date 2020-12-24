@@ -235,7 +235,7 @@
           flex-direction: row;
 }
 
-.page10section, .page11section {
+.page10section, .page11section, .lastPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,5 +556,19 @@ body {
   height: 400px;
   width: 700px;
   opacity: 0;
+}
+
+.thankYou {
+  height: 50%;
+  width: 50%;
+}
+
+.thankYou h1 {
+  font-size: 50px;
+  color: black;
+}
+
+.thankYou h1 span {
+  color: crimson;
 }
 /*# sourceMappingURL=styles.css.map */
