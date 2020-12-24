@@ -11,7 +11,7 @@
 }
 
 body{
-    background-color:  #5961668f;
+    background-color:  #0974b362;
             // background-image: url("https://i.ibb.co/ZzzfS66/christmas-Village-Transparent.png");
             // background-position: center;
             background-image: url("https://i.ibb.co/hy6VHW1/yoyoyoyo34.png");
@@ -72,27 +72,28 @@ z-index: 1;
 // .page8{
 //     background-color: rgba(2, 2, 255, 0.342);
 // }
-@font-face {
-    font-family: myFirstFont;
-    src: url(Linotte_Bold.woff);
- }
+// @font-face {
+//     font-family: myFirstFont;
+//     src: url(Linotte_Bold.woff);
+//  }
  
- * {
-    font-family: myFirstFont;
- }
+//  * {
+//     font-family: myFirstFont;
+//  }
 .office{
     position: absolute;
-    bottom: 159px;
-    left:10%;
+    bottom: 90px;
+    left:0%;
     height:60%;
     width:60%;
+    z-index: 1;
 }
 .bannerNetc{
     position: absolute;
-    bottom:165px;
-    right:0%;
-    height:60%;
-    width:40%;
+    bottom:100px;
+    right:3%;
+    height:70%;
+    width:50%;
 }
 .expMile{
     position: absolute;
@@ -102,12 +103,13 @@ z-index: 1;
     left: 0%;
     z-index: 10;
 }
-.page9{
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-wrap: nowrap;
-    // flex-direction: row;
+#aboutMe{
+   position: absolute;
+   right:10%;
+   top:0;
+   height:500px;
+   width:600px;
+   opacity: 0;
 }
 
   .rsvProject{
@@ -139,5 +141,22 @@ z-index: 1;
     
   }
   .pr1,.pr2,.pr3,.pr4,.pr5{
+      opacity: 0;
+  }
+  #underconstruction{
+      position:absolute;
+      right:0;
+      height:300px;
+      width: 300px;
+      bottom: 10%;
+      opacity: 0;
+  }
+  #constructionVehicle{
+      position: absolute;
+    //   transform: scaleX(-1);
+      bottom: 10%;
+      left: 20%;
+      height: 400px;
+      width:700px;
       opacity: 0;
   }

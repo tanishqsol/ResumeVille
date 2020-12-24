@@ -1,3 +1,15 @@
+@font-face {
+    font-family: montserart;
+    src: url(Montserrat-Bold.otf);
+ }
+ @font-face {
+    font-family: raleway;
+    src: url(Raleway-Regular.ttf);
+ }
+ 
+//  * {
+//     font-family: montserart;
+//  }
 .mySkillsOne{
     // display: flex;
     // align-items: center;
@@ -7,16 +19,29 @@
      position: absolute;
     margin: 60px auto;
     // height: 100%;
-    width: 70%;
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+
+    // background-image: url("https://i.ibb.co/16fCsXF/blank2.png");
+    // background-size: cover;
+    // background-size: ;
     // border:1px solid black;
     
     // background-color: rgba(187, 255, 0, 0.383);
-    bottom: 40%;
+    bottom: 20%;
     // transform: scaleX(-0.5);
     color: white;
+    font-family: raleway;
     list-style: none;
     // flex-direction: column;
     // border: 1px solid black;
+}
+.skillBackground{
+    position: absolute;
+    z-index: 1;
+    // left: 20%;
+    // bottom: 20%;
 }
 .mySkillsOne li{
     margin: 20px 0;
@@ -35,7 +60,7 @@
 .bar span{
     height: 9px;
     float: left;
-    background: #ff0000;
+    background: #C42948;
 }
 
 .progress_animated_des{
@@ -62,6 +87,19 @@
     }
 
 }
+.mulDisText{
+    font-family: montserart;
+    position: absolute;
+    color: #ffffff;
+    top:10%;
+    font-size: 45px;
+    left:20%;
+span{
+    color: #ff0080;
+
+    // color: #ff0000;
+}
+}
 .skillMile{
     position: absolute;
     bottom:140px;
@@ -82,6 +120,7 @@
 }
 .pole2{
     height: 100%;
+    z-index: 100;
     right:0%;
     bottom: 0;
     width:8%;
@@ -101,133 +140,135 @@
 #progSkillsBanner{
     position: absolute;
     top: 0%;
-    height:50%;
-    width:50%;
+    left:30%;
+    // height:50%;
+    // width:50%;
     opacity: 0;
     
     
 }
-#animSkillsText{
-    position: absolute;
-    left:15%;
-    top:50%;
-    font-size:5vh;
-   color: white;
-opacity: 0;
-}
+// #animSkillsText{
+//     position: absolute;
+//     left:15%;
+//     top:50%;
+//     font-size:5vh;
+//    color: white;
+// opacity: 0;
+// }
 #animSkillsBanner{
     position: absolute;
     top: 0%;
-    left:5%;
-    height:50%;
-    width:50%;
+    left:10%;
+    // border: 1px solid white;
+    // height:50%;
+    // width:50%;
     opacity: 0;
     
     
 }
-#animSkillBanner_animate{
-    position: absolute;
-    top: 0%;
-    left:5%;
-    height:50%;
-    width:50%;
-    animation: animBanner 0.5s ease-out ;
-    opacity: 1;
+// #animSkillBanner_animate{
+//     position: absolute;
+//     top: 0%;
+//     left:5%;
+//     // height:50%;
+//     // width:50%;
+//     animation: animBanner 0.5s ease-out ;
+//     opacity: 1;
     
     
    
    
-@keyframes animBanner{
-    0%{
-        height:  0px;
+// @keyframes animBanner{
+//     0%{
+//         height:  0px;
       
-    }
-    50%{
-        height:60% ;
+//     }
+//     50%{
+//         height:70% ;
        
-    }
+//     }
   
-    100%{
-        opacity: 1;
-        height:50% ;
+//     100%{
+//         opacity: 1;
+//         height:60% ;
        
-    }
-}
-}
-#progSkillBanner_animate{
-    position: absolute;
-    top: 0%;
-    height:50%;
-    width:30%;
-    animation: banner1 0.5s ease-out ;
-    opacity: 1;
+//     }
+// }
+// }
+// #progSkillBanner_animate{
+//     position: absolute;
+//     top: 0%;
+//     // height:50%;
+//     // width:30%;
+//     animation: banner1 0.5s ease-out ;
+//     opacity: 1;
     
     
    
    
-@keyframes banner1{
-    0%{
-        height:  0px;
+// @keyframes banner1{
+//     0%{
+//         height:  0px;
       
-    }
-    50%{
-        height:60% ;
+//     }
+//     50%{
+//         height:70% ;
        
-    }
+//     }
   
-    100%{
-        opacity: 1;
-        height:50% ;
+//     100%{
+//         // opacity: 1;
+//         height:60% ;
        
-    }
-}
-}
+//     }
+// }
+// }
 
 #graphicsSkillsBanner   {
     position: absolute;
     top: 0%;
-    right:0%;
+    right:10%;
     // float: right;
-    height:50%;
-    width:40%;
+    // height:50%;
+    // width:40%;
     opacity: 0;
     
 }
-#graphicsSkillsText{
-    position: absolute;
-    left:65%;
-    top:50%;
-    font-size:5vh;
-    color: white;
+// #graphicsSkillsText{
+//     position: absolute;
+//     left:65%;
+//     top:50%;
+//     font-size:5vh;
+//     color: white;
     
-opacity: 0;
-}
-#designSkillBanner_animate{
-    position: absolute;
-    top: 0%;
-    right:0%;
-    height:50%;
-    width:40%;
-    animation: designAnimate 0.5s ease-out ;
-    opacity: 1;
+// opacity: 0;
+// }
+// #designSkillBanner_animate{
+//     position: absolute;
+//     top: 0%;
+//     right:0%;
+//     // height:50%;
+//     // width:40%;
+//     animation: designAnimate 0.5s ease-out ;
+//     opacity: 1;
     
     
    
    
-@keyframes designAnimate{
-    0%{
-        height:  0px;
+// @keyframes designAnimate{
+//     0%{
+//         height:  0px;
       
-    }
-    50%{
-        height:60% ;
+//     }
+//     50%{
+//         height:70% ;
        
-    }
+//     }
   
-    100%{
-        opacity: 1;
-        height:50% ;
+//     100%{
+//         opacity: 1;
+//         height:60% ;
        
-    }
-}
-}
+//     }
+// }
+// }

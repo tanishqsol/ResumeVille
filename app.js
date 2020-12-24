@@ -18,6 +18,7 @@ function checkScrollDirection(event) {
         backPos = "-15620px"
     }
 
+
 }
 
 function checkScrollDirectionIsUp(event) {
@@ -47,7 +48,7 @@ gsap.to(girl_class, {
     scrollTrigger: {
         trigger: ".main-container",
         start: "top top",
-        end: "+=" + (frame_count * offset_value * 5),
+        end: "+=" + (frame_count * offset_value*5 ),
         scrub: true
     }
 });
@@ -86,7 +87,7 @@ gsap.to(".foothPath", {
     scrollTrigger: {
         trigger: ".main-container",
         start: "top top",
-        end: "+=" + (frame_footPath * offset_value_foothPath * 50),
+        end: "+=" + (frame_footPath * offset_value_foothPath * 40),
         scrub: 0.5
     }
 });
