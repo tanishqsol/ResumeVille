@@ -14,16 +14,16 @@ const vms = document.querySelector(".pr4")
 const test = document.querySelector(".pr5")
 
 
-function introBoxAboutMe() {
-    // var divPos = introBoxAbout.getBoundingClientRect().right;
-    // var screenPos = window.innerWidth / 0.75;
-    // if (divPos < screenPos) {
-    introBoxAbout.className = 'animate__animated animate__slideInDown animate__fast';
-    introBoxAbout.style.setProperty('--animate-duration', '1.5s');
-    introBoxAbout.style.setProperty('opacity', '1');
-    // }
-}
-$(document).ready(introBoxAboutMe)
+// function introBoxAboutMe() {
+//     // var divPos = introBoxAbout.getBoundingClientRect().right;
+//     // var screenPos = window.innerWidth / 0.75;
+//     // if (divPos < screenPos) {
+//     introBoxAbout.className = 'animate__animated animate__slideInDown animate__fast';
+//     introBoxAbout.style.setProperty('--animate-duration', '1.5s');
+//     introBoxAbout.style.setProperty('opacity', '1');
+//     // }
+// }
+// $(document).ready(introBoxAboutMe)
 // window.addEventListener('scroll', introBoxAboutMe);
 
 function gradCapAnim() {

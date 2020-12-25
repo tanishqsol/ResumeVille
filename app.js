@@ -1,4 +1,5 @@
 console.log("my name is tanishq");
+
 $(window).scroll(function () {
     var scrolled_val = $(document).scrollTop().valueOf();
     console.log(scrolled_val + ' = scroll value');
@@ -48,7 +49,7 @@ gsap.to(girl_class, {
     scrollTrigger: {
         trigger: ".main-container",
         start: "top top",
-        end: "+=" + (frame_count * offset_value*5 ),
+        end: "+=" + (frame_count * offset_value * 5),
         scrub: true
     }
 });

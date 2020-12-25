@@ -29,9 +29,18 @@
 
 
     </div>
-
+    <div id="preloader">
+        <img src="./styles/loading.gif"
+             id="loadingGif">
+             <h1>Loading</h1>
+        <!-- <div class="viewer_loader">
+            <!-- <h1>Loading</h1> -->
+    </div>
+    <!-- <h1>Loading</h1> -->
+    </div>
     <section class="character"
              id="sticky">
+
 
         <div class="viewer"
              id="girlClass">
@@ -64,11 +73,7 @@
 
 
             <div class="content page1">
-                <!-- <div class="orangeBoxDiv">
-                    <img src="https://i.ibb.co/S66VV5M/arro2use-Photoshop-Upload2.png"
-                         class="orangeBox">
 
-                </div> -->
                 <img src="https://i.ibb.co/JsThF49/house1.png"
                      class="house1"
                      height="300">
@@ -263,17 +268,35 @@
             smoothScrollingDuration: 200
         });
     </script>
-    <script>
-        $(document).ready(function () {
-            $(window).scrollTop(0);
-        });
-    </script>
     <script src="app.js"></script>
     <script src="app2.js"></script>
     <script>
         if (screen.width <= 700) {
             document.location = "sample.html"
         }
+    </script>
+    <script>
+        var preloader = document.querySelector("#preloader")
+        var loadingGifImg = document.querySelector("#loadingGif")
+        var introBoxAbout = document.querySelector("#aboutMe");
+        function preloadFunction() {
+
+            loadingGifImg.className = "animate__animated animate__fadeOut"
+            preloader.className = "animate__animated animate__fadeOut"
+            introBoxAboutMe()
+        }
+        function introBoxAboutMe() {
+        
+            introBoxAbout.className = 'animate__animated animate__slideInDown animate__fast';
+            introBoxAbout.style.setProperty('--animate-duration', '1.5s');
+            introBoxAbout.style.setProperty('opacity', '1');
+            // }
+        }
+        $(document).ready(function () {
+            $(window).scrollTop(0);
+        });
+        window.addEventListener("load", preloadFunction)
+
     </script>
 
 </body>
