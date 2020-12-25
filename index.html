@@ -32,7 +32,7 @@
     <div id="preloader">
         <img src="./styles/loading.gif"
              id="loadingGif">
-             <h1>Loading</h1>
+        <h1>Loading</h1>
         <!-- <div class="viewer_loader">
             <!-- <h1>Loading</h1> -->
     </div>
@@ -281,12 +281,14 @@
         var introBoxAbout = document.querySelector("#aboutMe");
         function preloadFunction() {
 
-            loadingGifImg.className = "animate__animated animate__fadeOut"
-            preloader.className = "animate__animated animate__fadeOut"
+            // loadingGifImg.className = "animate__animated animate__fadeOut"
+            // preloader.className = "animate__animated animate__fadeOut"
+            loadingGifImg.className = "loaderGifVanish"
+            preloader.className = "preloaderPageVanish"
             introBoxAboutMe()
         }
         function introBoxAboutMe() {
-        
+
             introBoxAbout.className = 'animate__animated animate__slideInDown animate__fast';
             introBoxAbout.style.setProperty('--animate-duration', '1.5s');
             introBoxAbout.style.setProperty('opacity', '1');

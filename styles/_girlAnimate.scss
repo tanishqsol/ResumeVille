@@ -33,18 +33,31 @@
   z-index: 100;
   background-color:rgb(255, 255, 255)  ;
   position: fixed;
+  opacity: 1;
   
 }
-.preloader_animation{
-  animation: animPreloaderScreen 1s forwards;
-
+.preloaderPageVanish{
+  height:100%;
+  width:100%;
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+  z-index: 100;
+  background-color:rgb(255, 255, 255)  ;
+  position: fixed;
+  opacity: 0;
+  animation: preloaderPageVanished 1s forwards;
 }
-@keyframes animPreloaderScreen{
+@keyframes preloaderPageVanished{
+  
   100%{
     opacity: 0;
     visibility: hidden;
   }
 }
+
+
 // .viewer_loader {
 //   // height: 121px;
 //   // position: absolute;
@@ -75,6 +88,15 @@
 //     background-position:-771px;
 //   }
 // }
+.loaderGifVanish{
+  animation: animPreloaderScreen 1s forwards;
+}
+@keyframes animPreloaderScreen{
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .viewer {
   height: 227px;
   // border: 1px solid black;

@@ -45,9 +45,48 @@
   z-index: 100;
   background-color: white;
   position: fixed;
+  opacity: 1;
 }
 
-.preloader_animation {
+.preloaderPageVanish {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  background-color: white;
+  position: fixed;
+  opacity: 0;
+  -webkit-animation: preloaderPageVanished 1s forwards;
+          animation: preloaderPageVanished 1s forwards;
+}
+
+@-webkit-keyframes preloaderPageVanished {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes preloaderPageVanished {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loaderGifVanish {
   -webkit-animation: animPreloaderScreen 1s forwards;
           animation: animPreloaderScreen 1s forwards;
 }
