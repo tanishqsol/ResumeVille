@@ -21,7 +21,11 @@ function checkScrollDirectionIsUp(event) {
     }
     return event.deltaY < 0;
 }
+// gsap.to(".thankyou",{
+//     scrollTrigger:{
 
+//     }
+// })
 
 
 var frame_count = 120,

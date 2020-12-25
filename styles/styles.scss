@@ -8,7 +8,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+@font-face {
+    font-family: montserart;
+    src: url(Montserrat-Bold.otf);
+ }
+ @font-face {
+    font-family: raleway;
+    src: url(Raleway-Regular.ttf);
+ }
+ 
 body{
     background-color:  #0974b362;
             // background-image: url("https://i.ibb.co/ZzzfS66/christmas-Village-Transparent.png");
@@ -161,12 +169,20 @@ z-index: 1;
   }
   .thankYou{
       height: 50%;
+    //   position: fixed;
       width:50%;
       h1{
           font-size: 50px;
+          font-family: montserart;
           color: black;
           span{
               color: crimson;
           }
       }
+      h3{
+        font-size: 40px;
+        font-family: raleway;
+        color: white;
+      }
+      
   }
