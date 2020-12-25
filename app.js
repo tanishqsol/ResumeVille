@@ -8,10 +8,8 @@ window.addEventListener('wheel', checkScrollDirection);
 function checkScrollDirection(event) {
     if (checkScrollDirectionIsUp(event)) {
         girl_class.className = "viewer_back"
-        backPos = "15593px"
     } else {
         girl_class.className = "viewer"
-        backPos = "-15620px"
     }
 
 
@@ -24,21 +22,12 @@ function checkScrollDirectionIsUp(event) {
     return event.deltaY < 0;
 }
 
-function backPosGirl() {
-    if (girl_class.className = "viewer") {
-        backPos = "-15620px"
-    }
-    if (girl_class.className = "viewer_back") {
-        backPos = "15593px"
-    }
-    return backPos;
-}
 
 
 var frame_count = 120,
     offset_value = 100;
 gsap.to(girl_class, {
-    backgroundPosition: "+=" + backPos,
+    backgroundPosition: -15620,
     immediateRender: true,
     ease: "steps(" + frame_count + ")", // use a stepped ease for the sprite sheet
     scrollTrigger: {
