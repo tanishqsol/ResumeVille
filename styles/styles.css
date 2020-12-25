@@ -233,7 +233,6 @@
 }
 
 .main-container section {
-  border: 1px solid black;
   min-width: 100%;
   max-width: 200%;
   height: 100vh;
@@ -457,6 +456,8 @@
   top: 0%;
   opacity: 0;
   left: 30%;
+  height: 60vh;
+  width: 40vw;
 }
 
 .eduMile {
@@ -551,28 +552,28 @@ body {
 }
 
 .rsvProject {
-  height: 300px;
-  width: 600px;
+  height: 30vh;
+  width: 40vw;
 }
 
 .ruleEngProject {
-  height: 300px;
-  width: 600px;
+  height: 30vh;
+  width: 40vw;
 }
 
 .nfvProject {
-  height: 300px;
-  width: 600px;
+  height: 30vh;
+  width: 40vw;
 }
 
 .vmsProject {
-  height: 300px;
-  width: 600px;
+  height: 30vh;
+  width: 40vw;
 }
 
 .testingProject {
-  height: 300px;
-  width: 600px;
+  height: 30vh;
+  width: 40vw;
 }
 
 .projMile {
