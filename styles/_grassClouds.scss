@@ -1,46 +1,50 @@
-#wrapper {
-    position:absolute;
-    width:100%;
-    height:80%;
-    z-index: 0;
-    top:0 
-  }
+// #wrapper {
+//     position:fixed;
+//     width:100%;
+//     height:80%;
+//     // z-index: 1;
+//     z-index:-100;
+
+//     top:0 
+//   }
   
   #clouds{
     // background:url("/clouds/movingClouds2.png");
-    background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/bg-clouds2-tinypng.png") repeat-x 0 bottom #ACE6FF;
+    // background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/bg-clouds2-tinypng.png") repeat-x  transparent;
     width:100%;
-    height:120px; /*190px*/
-    // min-height:90px;
-    position:absolute;
+    // height:120px; /*190px*/
+    min-height:190px;
+    position:fixed;
     top:0;
     background-repeat: repeat-x;
     left:0;
-    // z-index:19;
-    -webkit-transform:translate3d(0,0,0.01);
-    transform:translate3d(0,0,0.01);
+    z-index:-100;
+    // -webkit-transform:translate3d(0,0,0.01);
+    // transform:translate3d(0,0,0.01);
   }
   
   .grass {
     background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/grass_tile-tinypng.png") repeat-x transparent;    
     position: fixed;
-    bottom: 0;
+                background-attachment: scroll;
+
+    bottom: 60px;
     left: 0;
-    z-index:1;
+    z-index:-100;
     width: 100%;
     height: 200px;
     // min-height:92px;
     border:0 none transparent;
     outline:0 none transparent;
-    -webkit-transform:translate3d(0,0,0.01);
-    transform:translate3d(0,0,0.01);
-    will-change: transform;
+    // -webkit-transform:translate3d(0,0,0.01);
+    // transform:translate3d(0,0,0.01);
+    // will-change: transform;
   }
   .house1{
-    bottom:85px;
+    bottom:145px;
     left:0;
     position: absolute;
-    z-index: 10;
+    z-index: 40;
   }
   // .hills{
   //   position: absolute;
