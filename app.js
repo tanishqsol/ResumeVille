@@ -1,5 +1,6 @@
 console.log("my name is tanishq");
-var backPos = "-15620px";
+var backPos = '-15620px'
+var backPosFlag;
 var scrollCount = 0;
 gsap.registerPlugin(ScrollTrigger);
 var girl_class = document.getElementById("girlClass");
@@ -11,27 +12,61 @@ function checkScrollDirection(event) {
     } else {
         girl_class.className = "viewer"
     }
-
-
 }
-
 function checkScrollDirectionIsUp(event) {
     if (event.wheelDelta) {
         return event.wheelDelta > 0;
     }
     return event.deltaY < 0;
 }
-// gsap.to(".thankyou",{
-//     scrollTrigger:{
+
+
+// document.body.onkeydown = function (e) {
+//     var code = e.keyCode;
+//     if (code === 39) { // key code for right arrow
+//         girl_class.className = "viewer"
+
+
+//         window.scrollBy(0, window.innerHeight * 0.5);
 
 //     }
-// })
+//     if (code === 37) { // key code for left arrow
+//         girl_class.className = "viewer_back"
+
+
+//         window.scrollBy(0, -window.innerHeight * 0.5);
+
+//     }
+// };
+
+document.body.onkeydown = function (e) {
+    var code = e.keyCode;
+    if (code === 39) { // key code for right arrow
+        girl_class.className = "viewer"
+        backPosFlag = true;
+        setInterval(
+
+            window.scrollBy(0, window.innerHeight * 0.5)
+            , 1
+        )
+    }
+    if (code === 37) {
+        girl_class.className = "viewer_back"
+        backPosFlag = true;
+        setInterval(
+
+            window.scrollBy(0, -window.innerHeight * 0.5)
+            , 1
+        )
+    }
+};
 
 
 var frame_count = 120,
-    offset_value = 100;
+    offset_value = 100
+
 gsap.to(girl_class, {
-    backgroundPosition: -15620,
+    backgroundPosition: backPos,
     immediateRender: true,
     ease: "steps(" + frame_count + ")", // use a stepped ease for the sprite sheet
     scrollTrigger: {
@@ -41,6 +76,11 @@ gsap.to(girl_class, {
         scrub: true
     }
 });
+
+
+
+
+
 var frame_road = 12,
     offset_value_road = 100;
 gsap.to(".lines", {
