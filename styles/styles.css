@@ -263,16 +263,8 @@
   display: flex;
 }
 
-.resumeVille {
-  position: absolute;
-  height: 90%;
-  left: 30%;
-  bottom: 10px;
-}
-
 .main-container section {
   min-width: 100%;
-  max-width: 200%;
   height: 100vh;
   position: relative;
 }
@@ -295,6 +287,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.resumeVille {
+  position: absolute;
+  height: 90vh;
+  left: 30%;
+  bottom: 10px;
 }
 
 .page9section {
@@ -582,12 +581,11 @@ body {
   width: 50%;
 }
 
-.expMile {
+.expMileStone {
   position: absolute;
   bottom: 140px;
-  height: 38%;
-  left: 0%;
-  z-index: 10;
+  height: 35%;
+  right: -5%;
 }
 
 #aboutMe {

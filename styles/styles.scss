@@ -102,13 +102,12 @@ z-index: 1;
     height:70%;
     width:50%;
 }
-.expMile{
-    position: absolute;
-    bottom:140px;
-    height:38%;
-
-    left: 0%;
-    z-index: 10;
+.expMileStone{
+  position: absolute;
+  bottom:140px;
+  height:35%;
+  right: -5%;
+  // z-index: 10;
 }
 #aboutMe{
    position: absolute;
