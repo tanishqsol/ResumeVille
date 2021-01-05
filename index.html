@@ -17,6 +17,8 @@
         new WOW().init();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
 
 </head>
 
@@ -26,7 +28,8 @@
     <div class="bettyButton">
         <img src="https://i.ibb.co/hKjzvDz/betty-Face-Top-Left.png"
              class="bettyButtonFrontFace">
-             <img src="https://i.ibb.co/8bZ3LbS/betty-Car-Sit.png" class="bettyButtonCar">
+        <img src="https://i.ibb.co/8bZ3LbS/betty-Car-Sit.png"
+             class="bettyButtonCar">
     </div>
     <div id="preloader">
         <img src="./styles/loading.gif"
@@ -42,9 +45,9 @@
         <img src="https://i.ibb.co/TrN7Gxw/Pin-Clipart-com-free-clip-arts-1269067.png"
              class="bettyCarBack"> -->
 
-             <div class = "bettyCar">
+        <div class="bettyCar">
 
-             </div>
+        </div>
         <div class="viewer"
              id="girlClass">
         </div>
@@ -75,7 +78,11 @@
         <section>
 
             <div class="content page1">
-
+                <div id="typedd">
+                    <p id="first"></p>
+                    <p id="sec"></p>
+                    <p id="third"></p>
+                </div>
                 <img src="https://i.ibb.co/JsThF49/house1.png"
                      class="house1"
                      height="300vh">
@@ -275,7 +282,24 @@
     </script> -->
     <script>
 
-
+        var typed = new Typed('#first', {
+            strings: [" You can scroll<span class ='enterKey'> up or down"],
+            typeSpeed: 20,
+            startDelay: 500,
+            cursorChar: '<br>',
+        });
+        var typed2 = new Typed('#sec', {
+            strings: [" You can also use <span class ='enterKey'>right or left <span class = 'strong'>arrow keys</span>"],
+            typeSpeed: 20,
+            startDelay: 1300,
+            cursorChar: '<br>',
+        });
+        var typed2 = new Typed('#third', {
+            strings: [" If you get tired, <span class ='enterKey'>press Enter <span class = 'strong'>key</span>"],
+            typeSpeed: 20,
+            startDelay: 1900,
+            cursorChar: '<br>',
+        });
 
     </script>
     <script>

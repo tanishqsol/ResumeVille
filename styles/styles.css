@@ -758,4 +758,23 @@ body {
   font-family: raleway;
   color: white;
 }
+
+#typedd {
+  position: absolute;
+  height: 30%;
+  font-family: montserart;
+  width: 39%;
+  top: 20vh;
+  left: 11vw;
+  color: whitesmoke;
+  font-size: x-large;
+}
+
+#typedd .enterKey {
+  color: #ff0062;
+}
+
+#typedd .strong {
+  color: #e04598;
+}
 /*# sourceMappingURL=styles.css.map */

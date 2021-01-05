@@ -186,3 +186,21 @@ z-index: 1;
       }
       
   }
+  #typedd{
+    position: absolute;
+    height: 30%;
+    font-family: montserart;
+    // border: 1px solid black;
+    width:39%;
+    top:20vh;
+    left:11vw;
+    color: whitesmoke;
+    font-size: x-large;
+    .enterKey{
+      color: rgb(255, 0, 98);
+    }
+    .strong{
+      color: rgb(224, 69, 152);
+
+    }
+  }
