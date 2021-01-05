@@ -4,15 +4,24 @@ var backPosFlag;
 var scrollCount = 0;
 gsap.registerPlugin(ScrollTrigger);
 var girl_class = document.getElementById("girlClass");
+
 window.addEventListener('wheel', checkScrollDirection);
 
 function checkScrollDirection(event) {
     if (checkScrollDirectionIsUp(event)) {
+
         girl_class.className = "viewer_back"
-    } else {
+        bettysCar.className = "bettyCarBack"
+
+    }
+    else {
+
         girl_class.className = "viewer"
+        bettysCar.className = "bettyCar"
+
     }
 }
+
 function checkScrollDirectionIsUp(event) {
     if (event.wheelDelta) {
         return event.wheelDelta > 0;
@@ -21,28 +30,83 @@ function checkScrollDirectionIsUp(event) {
 }
 
 
-// document.body.onkeydown = function (e) {
-//     var code = e.keyCode;
-//     if (code === 39) { // key code for right arrow
-//         girl_class.className = "viewer"
 
 
-//         window.scrollBy(0, window.innerHeight * 0.5);
-
-//     }
-//     if (code === 37) { // key code for left arrow
-//         girl_class.className = "viewer_back"
 
 
-//         window.scrollBy(0, -window.innerHeight * 0.5);
+var bettysButton = document.querySelector(".bettyButton")
+var bettysCarButton = document.querySelector(".bettyButtonCar")
+var bettyClass = document.querySelector(".viewer");
+var bettyClassBack = document.querySelector(".viewer_back");
 
-//     }
-// };
+
+var bettyCarBACK = document.querySelector(".bettyCarBack");
+var bettysCar = document.querySelector(".bettyCar");
+
+var carFlag = false;
+function onBettyButtonClick(e) {
+    //0 when car is off
+    if (!carFlag) {
+        bettysCar.style.opacity = "1"
+        girl_class.style.opacity = "0"
+        bettysCarButton.style.opacity = "0"
+
+        carFlag = true;
+
+    }
+    //1 when car is onn
+    else if (carFlag) {
+        bettysCar.style.opacity = "0"
+        girl_class.style.opacity = "1"
+        bettysCarButton.style.opacity = "1"
+
+        carFlag = false;
+
+    }
+}
+bettysButton.addEventListener("click", onBettyButtonClick)
+
+
+var enterPressed = 0;
+window.onkeypress = function (e) {
+    var keyCode = (e.keyCode || e.which);
+    if (keyCode === 13) {
+        if (enterPressed === 0) {
+            enterPressed++;
+            bettysCar.style.opacity = "1"
+            girl_class.style.opacity = "0"
+            bettysCarButton.style.opacity = "0"
+        } else if (enterPressed === 1) {
+            bettysCar.style.opacity = "0"
+            girl_class.style.opacity = "1"
+            bettysCarButton.style.opacity = "1"
+            enterPressed--;
+        }
+        return;
+    }
+};
+
+
 
 document.body.onkeydown = function (e) {
     var code = e.keyCode;
+    // var enterPressed = 0;
+
+    // if (code == 13) {
+    //     if (enterPressed == 0) {
+    //         enterPressed = 1;
+    //         bettysCar.style.opacity = "1"
+    //     }
+    //     else if (enterPressed == 1) {
+    //         bettysCar.style.opacity = "0"
+
+    //     }
+    //     enterPressed = 0;
+
+    // }
     if (code === 39) { // key code for right arrow
         girl_class.className = "viewer"
+        bettysCar.className = "bettyCar"
         backPosFlag = true;
         setInterval(
 
@@ -52,6 +116,8 @@ document.body.onkeydown = function (e) {
     }
     if (code === 37) {
         girl_class.className = "viewer_back"
+        bettysCar.className = "bettyCarBack"
+
         backPosFlag = true;
         setInterval(
 

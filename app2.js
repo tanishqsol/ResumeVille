@@ -13,19 +13,6 @@ const nfv = document.querySelector(".pr3")
 const vms = document.querySelector(".pr4")
 const test = document.querySelector(".pr5")
 
-
-// function introBoxAboutMe() {
-//     // var divPos = introBoxAbout.getBoundingClientRect().right;
-//     // var screenPos = window.innerWidth / 0.75;
-//     // if (divPos < screenPos) {
-//     introBoxAbout.className = 'animate__animated animate__slideInDown animate__fast';
-//     introBoxAbout.style.setProperty('--animate-duration', '1.5s');
-//     introBoxAbout.style.setProperty('opacity', '1');
-//     // }
-// }
-// $(document).ready(introBoxAboutMe)
-// window.addEventListener('scroll', introBoxAboutMe);
-
 function gradCapAnim() {
     var divPos = cap.getBoundingClientRect().right;
     var screenPos = window.innerWidth / 0.9;
@@ -180,7 +167,7 @@ function constrVehicle() {
     var divPos = constructionVehicle.getBoundingClientRect().right;
     var screenPos = window.innerWidth / 0.8;
     if (divPos < screenPos) {
-     
+
         constructionVehicle.className = 'animate__animated animate__slideInRight animate__fast';
         constructionVehicle.style.setProperty('--animate-duration', '1.5s');
         constructionVehicle.style.setProperty('opacity', '1');
@@ -193,7 +180,7 @@ function underConstr() {
     var divPos = underConstruction.getBoundingClientRect().right;
     var screenPos = window.innerWidth / 0.8;
     if (divPos < screenPos) {
-     
+
         underConstruction.className = 'animate__animated animate__backInUp animate__fast';
         underConstruction.style.setProperty('--animate-duration', '1s');
         underConstruction.style.setProperty('opacity', '1');

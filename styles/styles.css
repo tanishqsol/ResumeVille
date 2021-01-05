@@ -119,6 +119,79 @@
   bottom: 65px;
 }
 
+.bettyCar {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right: 122px;
+  width: 65vh;
+  height: 25vh;
+  background-image: url("https://i.ibb.co/BP3htBB/front-Pin-Clipart-com-free-clip-arts-1269067.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 12;
+  bottom: 65px;
+  opacity: 0;
+  -webkit-animation: animateCar 0.5s infinite;
+          animation: animateCar 0.5s infinite;
+}
+
+.bettyCarBack {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right: 122px;
+  width: 65vh;
+  height: 25vh;
+  background-image: url("https://i.ibb.co/TrN7Gxw/Pin-Clipart-com-free-clip-arts-1269067.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 12;
+  bottom: 65px;
+  opacity: 0;
+  -webkit-animation: animateCar 0.5s infinite;
+          animation: animateCar 0.5s infinite;
+}
+
+@-webkit-keyframes animateCar {
+  0% {
+    height: 25vh;
+  }
+  100% {
+    height: 25.1vh;
+  }
+}
+
+@keyframes animateCar {
+  0% {
+    height: 25vh;
+  }
+  100% {
+    height: 25.1vh;
+  }
+}
+
+.bettyButton {
+  margin-left: 20px;
+  margin-top: 20px;
+  position: fixed;
+  z-index: 10;
+}
+
+.bettyButton .bettyButtonFrontFace {
+  height: 11vh;
+  width: 14vh;
+  position: absolute;
+}
+
+.bettyButton .bettyButtonCar {
+  height: 11vh;
+  width: 14vh;
+  position: absolute;
+}
+
 .viewer_back {
   height: 227px;
   -webkit-transform: scaleX(-1);

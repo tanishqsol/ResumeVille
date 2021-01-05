@@ -58,36 +58,6 @@
 }
 
 
-// .viewer_loader {
-//   // height: 121px;
-//   // position: absolute;
-//   // top:35%;
-//   // left:2%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-left: 40%;
-//   // margin-top: auto;
-//   // margin-right: auto;
-//   // display: flex;
-//   z-index: 12;
-
-//   // justify-content: center;
-//   // align-items: center;
-//   // padding-right:122px ;
-//   // max-width:  calc(771px/6);
-//   background-image:url("loading.gif");
-//   // background-position: 0 50%;
-//   // animation: animPreloader 1s steps(6) infinite;
-// }
-// @keyframes animPreloader{
-//   0%{
-//     background-position: 0;
-//   }
-//   100%{
-//     background-position:-771px;
-//   }
-// }
 .loaderGifVanish{
   animation: animPreloaderScreen 1s forwards;
 }
@@ -109,17 +79,87 @@
   max-width:  calc(15593px/120);
   // width:  100%;
   background-image:url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
-  
+  // opacity: 0;
   background-repeat:no-repeat;
   background-position: 0 50%;
   z-index: 11;
   bottom:65px;
   // animation: animateGirlForward steps(6) 1 ;
 }
+.bettyCar
+{
+  // border: 1px solid black;
+  position: absolute;
+  margin-left: 30%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right:122px ;
+  width:65vh;
+  height: 25vh;
+  background-image:url("https://i.ibb.co/BP3htBB/front-Pin-Clipart-com-free-clip-arts-1269067.png");
+  background-repeat:no-repeat;
+  background-size: contain;
+  // background-position: 0 50%;
+  z-index: 12;
+  bottom:65px;
+  opacity: 0;
+  animation: animateCar 0.5s infinite;
+
+}
+.bettyCarBack
+{
+  // border: 1px solid black;
+  position: absolute;
+  margin-left: 30%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right:122px ;
+  width:65vh;
+  height: 25vh;
+  background-image:url("https://i.ibb.co/TrN7Gxw/Pin-Clipart-com-free-clip-arts-1269067.png");
+  background-repeat:no-repeat;
+  background-size: contain;
+  // background-position: 0 50%;
+  z-index: 12;
+  bottom:65px;
+  opacity: 0;
+  animation: animateCar 0.5s infinite;
+
+}
+
+@keyframes animateCar {
+  0%{
+    height: 25vh ;
+  }
+  100%{
+    height: 25.1vh;
+  }
+}
+
+
+.bettyButton{
+  margin-left: 20px;
+  margin-top: 20px;
+  position: fixed;
+  z-index: 10;
+  
+  .bettyButtonFrontFace{
+    height: 11vh;
+    width:14vh;
+    position: absolute;
+    // opacity: 0;
+  }
+  .bettyButtonCar{
+    height: 11vh;
+    width:14vh;
+    position: absolute;
+    // opacity: 0;
+  }
+}
+
 
 .viewer_back {
   height: 227px;
-  // border: 1px solid black;
   transform: scaleX(-1);
   position: absolute;
   margin-left: 40%;
@@ -136,12 +176,10 @@
   background-position: 0 50%;
   // border:1px solid black;
   z-index: 11;
+  
   bottom:65px;
 }
-// .foothPath{
-//   width: 100%;
-//   z-index: 11;
-// }
+
 
 .foothPath{
   position: fixed;
