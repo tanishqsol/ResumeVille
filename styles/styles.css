@@ -309,7 +309,8 @@
   bottom: 145px;
   left: 0;
   position: absolute;
-  z-index: 40;
+  z-index: 10;
+  height: 30vh;
 }
 
 .hill1 {
@@ -763,6 +764,7 @@ body {
   position: absolute;
   height: 30%;
   font-family: montserart;
+  z-index: 11;
   width: 39%;
   top: 20vh;
   left: 11vw;
