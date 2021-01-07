@@ -797,6 +797,13 @@ body {
   color: white;
 }
 
+.thankYou .theEnd {
+  color: crimson;
+  font-family: montserart;
+  padding-top: 20px;
+  font-size: 35px;
+}
+
 #typedd {
   position: absolute;
   height: 30%;
