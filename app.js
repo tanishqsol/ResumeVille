@@ -1,18 +1,25 @@
 console.log("my name is tanishq");
-var backPos = "-15620px";
+var backPos = '-15620px'
+var backPosFlag;
 var scrollCount = 0;
 gsap.registerPlugin(ScrollTrigger);
 var girl_class = document.getElementById("girlClass");
+
 window.addEventListener('wheel', checkScrollDirection);
 
 function checkScrollDirection(event) {
     if (checkScrollDirectionIsUp(event)) {
+
         girl_class.className = "viewer_back"
-    } else {
-        girl_class.className = "viewer"
+        bettysCar.className = "bettyCarBack"
+
     }
+    else {
 
+        girl_class.className = "viewer"
+        bettysCar.className = "bettyCar"
 
+    }
 }
 
 function checkScrollDirectionIsUp(event) {
@@ -21,17 +28,111 @@ function checkScrollDirectionIsUp(event) {
     }
     return event.deltaY < 0;
 }
-// gsap.to(".thankyou",{
-//     scrollTrigger:{
 
-//     }
-// })
+
+
+
+
+
+var bettysButton = document.querySelector(".bettyButton")
+var bettysCarButton = document.querySelector(".bettyButtonCar")
+var bettyClass = document.querySelector(".viewer");
+var bettyClassBack = document.querySelector(".viewer_back");
+
+
+var bettyCarBACK = document.querySelector(".bettyCarBack");
+var bettysCar = document.querySelector(".bettyCar");
+
+var carFlag = false;
+function onBettyButtonClick(e) {
+    //0 when car is off
+    if (!carFlag) {
+        bettysCar.style.opacity = "1"
+        girl_class.style.opacity = "0"
+        bettysCarButton.style.opacity = "0"
+
+        carFlag = true;
+
+    }
+    //1 when car is onn
+    else if (carFlag) {
+        bettysCar.style.opacity = "0"
+        girl_class.style.opacity = "1"
+        bettysCarButton.style.opacity = "1"
+
+        carFlag = false;
+
+    }
+}
+bettysButton.addEventListener("click", onBettyButtonClick)
+
+
+var enterPressed = 0;
+window.onkeypress = function (e) {
+    var keyCode = (e.keyCode || e.which);
+    if (keyCode === 13) {
+        if (enterPressed === 0) {
+            enterPressed++;
+            bettysCar.style.opacity = "1"
+            girl_class.style.opacity = "0"
+            bettysCarButton.style.opacity = "0"
+        } else if (enterPressed === 1) {
+            bettysCar.style.opacity = "0"
+            girl_class.style.opacity = "1"
+            bettysCarButton.style.opacity = "1"
+            enterPressed--;
+        }
+        return;
+    }
+};
+
+
+
+document.body.onkeydown = function (e) {
+    var code = e.keyCode;
+    // var enterPressed = 0;
+
+    // if (code == 13) {
+    //     if (enterPressed == 0) {
+    //         enterPressed = 1;
+    //         bettysCar.style.opacity = "1"
+    //     }
+    //     else if (enterPressed == 1) {
+    //         bettysCar.style.opacity = "0"
+
+    //     }
+    //     enterPressed = 0;
+
+    // }
+    if (code === 39) { // key code for right arrow
+        girl_class.className = "viewer"
+        bettysCar.className = "bettyCar"
+        backPosFlag = true;
+        setInterval(
+
+            window.scrollBy(0, window.innerHeight * 0.5)
+            , 1
+        )
+    }
+    if (code === 37) {
+        girl_class.className = "viewer_back"
+        bettysCar.className = "bettyCarBack"
+
+        backPosFlag = true;
+        setInterval(
+
+            window.scrollBy(0, -window.innerHeight * 0.5)
+            , 1
+        )
+    }
+};
 
 
 var frame_count = 120,
-    offset_value = 100;
+    offset_value = 100
+
 gsap.to(girl_class, {
-    backgroundPosition: -15620,
+    backgroundPosition: backPos,
     immediateRender: true,
     ease: "steps(" + frame_count + ")", // use a stepped ease for the sprite sheet
     scrollTrigger: {
@@ -41,6 +142,11 @@ gsap.to(girl_class, {
         scrub: true
     }
 });
+
+
+
+
+
 var frame_road = 12,
     offset_value_road = 100;
 gsap.to(".lines", {

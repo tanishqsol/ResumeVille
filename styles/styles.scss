@@ -102,13 +102,12 @@ z-index: 1;
     height:70%;
     width:50%;
 }
-.expMile{
-    position: absolute;
-    bottom:140px;
-    height:38%;
-
-    left: 0%;
-    z-index: 10;
+.expMileStone{
+  position: absolute;
+  bottom:140px;
+  height:35%;
+  right: -5%;
+  // z-index: 10;
 }
 #aboutMe{
    position: absolute;
@@ -132,6 +131,7 @@ z-index: 1;
       width:30vw;
   }
   .vmsProject{
+    margin-right:12vw;
     height:30vh;
     width:30vw;
   }
@@ -185,4 +185,23 @@ z-index: 1;
         color: white;
       }
       
+  }
+  #typedd{
+    position: absolute;
+    height: 30%;
+    font-family: montserart;
+    z-index: 11;
+    // border: 1px solid black;
+    width:39%;
+    top:20vh;
+    left:11vw;
+    color: whitesmoke;
+    font-size: x-large;
+    .enterKey{
+      color: rgb(255, 0, 98);
+    }
+    .strong{
+      color: rgb(224, 69, 152);
+
+    }
   }

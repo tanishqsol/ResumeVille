@@ -6,8 +6,6 @@
     <title>PortFolio</title>
     <link rel="stylesheet"
           href="styles/styles.css">
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script type="text/javascript"
@@ -19,29 +17,37 @@
         new WOW().init();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/0.6.1/progressbar.js"
-            integrity="sha512-31I8S0k9PCZb3or2whlgM88rgY9mvkSXTxIQMXMkc8N79b29nKc+MN8qVVJT0vE5D8uy1sVuNWrkAt6zEh+PZg=="
-            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
 </head>
 
 <body>
 
 
-
+    <div class="bettyButton">
+        <img src="https://i.ibb.co/hKjzvDz/betty-Face-Top-Left.png"
+             class="bettyButtonFrontFace">
+        <img src="https://i.ibb.co/8bZ3LbS/betty-Car-Sit.png"
+             class="bettyButtonCar">
     </div>
     <div id="preloader">
         <img src="./styles/loading.gif"
              id="loadingGif">
         <h1>Loading</h1>
-        <!-- <div class="viewer_loader">
-            <!-- <h1>Loading</h1> -->
     </div>
-    <!-- <h1>Loading</h1> -->
     </div>
     <section class="character"
              id="sticky">
 
+        <!-- <img src="https://i.ibb.co/BP3htBB/front-Pin-Clipart-com-free-clip-arts-1269067.png"
+             class="bettyCarFront">
+        <img src="https://i.ibb.co/TrN7Gxw/Pin-Clipart-com-free-clip-arts-1269067.png"
+             class="bettyCarBack"> -->
 
+        <div class="bettyCar">
+
+        </div>
         <div class="viewer"
              id="girlClass">
         </div>
@@ -72,10 +78,14 @@
         <section>
 
             <div class="content page1">
-
+                <div id="typedd">
+                    <p id="first"></p>
+                    <p id="sec"></p>
+                    <p id="third"></p>
+                </div>
                 <img src="https://i.ibb.co/JsThF49/house1.png"
                      class="house1"
-                     height="300">
+                     >
                 <img src="https://i.ibb.co/MGw7SZQ/INTROTOUPLOADFINAL.png"
                      id="aboutMe">
 
@@ -94,7 +104,7 @@
 
                 <img src="https://i.ibb.co/5WFPB6H/eduWhite.png"
                      class="eduMile"
-                     height="300">
+                     height="300vh">
 
             </div>
         </section>
@@ -187,6 +197,9 @@
                      id="graphicsSkillsBanner">
 
             </div>
+            <img src="https://i.ibb.co/0KcT6kv/EXPERIENCEWhite-Up.png"
+                 class="expMileStone">
+
         </section>
 
 
@@ -250,15 +263,6 @@
             </div>
         </section>
 
-        <!-- <section>
-            <div class="content page14">
-
-
-
-
-            </div>
-        </section> -->
-
     </div>
     <script type="text/javascript"
             src="skrollr.js"></script>
@@ -277,16 +281,32 @@
         }
     </script>
     <script>
-        // $(document).ready(function () { $(this).document.location = "firstPageSection" });
+
+        var typed = new Typed('#first', {
+            strings: [" You can scroll<span class ='enterKey'> up or down"],
+            typeSpeed: 20,
+            startDelay: 500,
+            cursorChar: '<br>',
+        });
+        var typed2 = new Typed('#sec', {
+            strings: [" You can also use <span class ='enterKey'>right or left <span class = 'strong'>arrow keys</span>"],
+            typeSpeed: 20,
+            startDelay: 1300,
+            cursorChar: '<br>',
+        });
+        var typed2 = new Typed('#third', {
+            strings: [" If you get tired, <span class ='enterKey'>press Enter <span class = 'strong'>key</span>"],
+            typeSpeed: 20,
+            startDelay: 1900,
+            cursorChar: '<br>',
+        });
+
     </script>
     <script>
         var preloader = document.querySelector("#preloader")
         var loadingGifImg = document.querySelector("#loadingGif")
         var introBoxAbout = document.querySelector("#aboutMe");
         function preloadFunction() {
-
-            // loadingGifImg.className = "animate__animated animate__fadeOut"
-            // preloader.className = "animate__animated animate__fadeOut"
             loadingGifImg.className = "loaderGifVanish"
             preloader.className = "preloaderPageVanish"
             introBoxAboutMe()
