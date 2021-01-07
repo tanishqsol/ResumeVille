@@ -386,7 +386,7 @@
           flex-direction: row;
 }
 
-.page10section, .lastPage {
+.page10section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,6 +400,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.lastPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .page11section {
@@ -778,6 +790,10 @@ body {
 
 .thankYou {
   height: 50%;
+  position: fixed;
+  opacity: 0;
+  bottom: 10vh;
+  left: 10vw;
   width: 50%;
 }
 

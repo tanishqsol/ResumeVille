@@ -4,8 +4,26 @@ var backPosFlag;
 var scrollCount = 0;
 gsap.registerPlugin(ScrollTrigger);
 var girl_class = document.getElementById("girlClass");
+var lastPageDiv = document.querySelector(".thankYou")
+var lastPageSec = document.querySelector(".lastPage")
 
 window.addEventListener('wheel', checkScrollDirection);
+
+function lastPageFixed() {
+    var divPos = lastPageSec.getBoundingClientRect().left;
+    var screenPos = window.innerWidth / 3.5;
+    if (divPos < screenPos) {
+        lastPageDiv.style.opacity = "1"
+
+    }
+    else if (divPos > screenPos) {
+        lastPageDiv.style.opacity = "0"
+
+    }
+}
+window.addEventListener('scroll', lastPageFixed);
+
+
 
 function checkScrollDirection(event) {
     if (checkScrollDirectionIsUp(event)) {

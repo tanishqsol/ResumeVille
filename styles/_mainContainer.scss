@@ -48,13 +48,19 @@
     flex-direction: row;
     
 }
-.page10section ,.lastPage{
+.page10section {
     display: flex;
     align-items: center;
     // justify-content: center;
 
     justify-content: space-evenly;
     flex-direction: row;
+}
+.lastPage{
+    display: flex;
+    // position: fixed!important;
+    align-items: center;
+    justify-content: center;
 }
 .page11section{
     display: flex;

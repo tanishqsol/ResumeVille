@@ -183,7 +183,15 @@ z-index: 1;
   }
   .thankYou{
       height: 50%;
-    //   position: fixed;
+      position: fixed;
+      opacity: 0;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-direction: row;
+      // margin-bottom: 90vh;
+      bottom:10vh;
+      left: 10vw;
       width:50%;
       h1{
           font-size: 50px;
