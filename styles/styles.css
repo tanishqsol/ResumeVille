@@ -643,6 +643,43 @@ body {
   top: 50%;
 }
 
+.pressEnter {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5vh;
+  margin-left: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70%;
+  width: 70%;
+  opacity: 0;
+  z-index: 22;
+}
+
+.pressEnter h1 {
+  color: #d8dbe7;
+  font-family: montserart;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pressEnter span {
+  color: #ff097c;
+}
+
 .hillLanding {
   position: absolute;
   bottom: 0;

@@ -66,11 +66,12 @@ function onBettyButtonClick(e) {
 }
 bettysButton.addEventListener("click", onBettyButtonClick)
 
-
+var enterKeyBox = document.querySelector(".pressEnter");
 var enterPressed = 0;
 window.onkeypress = function (e) {
     var keyCode = (e.keyCode || e.which);
     if (keyCode === 13) {
+        enterKeyBox.style.visibility = "hidden"
         if (enterPressed === 0) {
             enterPressed++;
             bettysCar.style.opacity = "1"

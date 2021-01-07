@@ -12,6 +12,7 @@ const re = document.querySelector(".pr2")
 const nfv = document.querySelector(".pr3")
 const vms = document.querySelector(".pr4")
 const test = document.querySelector(".pr5")
+const netc = document.querySelector(".bannerNetc")
 
 function gradCapAnim() {
     var divPos = cap.getBoundingClientRect().right;
@@ -24,6 +25,16 @@ function gradCapAnim() {
 }
 // $(document).scroll(gradCapAnim)
 window.addEventListener('scroll', gradCapAnim);
+
+function showEnterDiv() {
+    var divPos = netc.getBoundingClientRect().left;
+    var screenPos = window.innerWidth / 1.3;
+    if (divPos < screenPos) {
+        enterKeyBox.style.opacity = "1"
+
+    }
+}
+window.addEventListener('scroll', showEnterDiv);
 
 const des = document.querySelector(".design");
 const ill = document.querySelector(".illustration");
