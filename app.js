@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 var girl_class = document.getElementById("girlClass");
 var lastPageDiv = document.querySelector(".thankYou")
 var lastPageSec = document.querySelector(".lastPage")
+var lastSectionGirlStopPointer = 0;
 
 window.addEventListener('wheel', checkScrollDirection);
 
@@ -14,6 +15,8 @@ function lastPageFixed() {
     var screenPos = window.innerWidth / 3.5;
     if (divPos < screenPos) {
         lastPageDiv.style.opacity = "1"
+        document.body.style.overflowY = "hidden"
+        lastSectionGirlStopPointer = 1
 
     }
     else if (divPos > screenPos) {
@@ -30,6 +33,13 @@ function checkScrollDirection(event) {
 
         girl_class.className = "viewer_back"
         bettysCar.className = "bettyCarBack"
+
+    }
+    if (checkScrollDirectionIsUp(event) && lastSectionGirlStopPointer == 1) {
+        document.body.style.overflowY = "scroll"
+        lastSectionGirlStopPointer == 0
+
+       
 
     }
     else {
@@ -123,7 +133,7 @@ document.body.onkeydown = function (e) {
     //     enterPressed = 0;
 
     // }
-    if (code === 39) { // key code for right arrow
+    if (code === 39 || code == 40) { // key code for right arrow
         girl_class.className = "viewer"
         bettysCar.className = "bettyCar"
         backPosFlag = true;
@@ -133,7 +143,7 @@ document.body.onkeydown = function (e) {
             , 1
         )
     }
-    if (code === 37) {
+    if (code === 37 || code == 38) {
         girl_class.className = "viewer_back"
         bettysCar.className = "bettyCarBack"
 
