@@ -35,7 +35,7 @@ function checkScrollDirection(event) {
         bettysCar.className = "bettyCarBack"
 
     }
-    if (checkScrollDirectionIsUp(event) && lastSectionGirlStopPointer == 1) {
+    else if (checkScrollDirectionIsUp(event) && lastSectionGirlStopPointer == 1) {
         document.body.style.overflowY = "scroll"
         lastSectionGirlStopPointer == 0
 
