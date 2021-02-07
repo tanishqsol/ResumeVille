@@ -21,6 +21,7 @@ function lastPageFixed() {
     }
     else if (divPos > screenPos) {
         lastPageDiv.style.opacity = "0"
+        document.body.style.overflowY = "scroll"
 
     }
 }
@@ -36,7 +37,7 @@ function checkScrollDirection(event) {
 
     }
     else if (checkScrollDirectionIsUp(event) && lastSectionGirlStopPointer == 1) {
-        document.body.style.overflowY = "scroll"
+        
         lastSectionGirlStopPointer == 0
 
        
