@@ -67,12 +67,20 @@ var bettysButton = document.querySelector(".bettyButton")
 var bettysCarButton = document.querySelector(".bettyButtonCar")
 var bettyClass = document.querySelector(".viewer");
 var bettyClassBack = document.querySelector(".viewer_back");
-
+// var buttonRight = document.querySelector(".buttonRight")
 
 var bettyCarBACK = document.querySelector(".bettyCarBack");
 var bettysCar = document.querySelector(".bettyCar");
 
 var carFlag = false;
+
+// var buttonRight = document.querySelector('.buttonRight')
+
+           function buttonRightClick() {
+                // document.getElementById('containerResume').scrollLeft += 20;
+                window.scrollTo(0,440)
+              };
+
 function onBettyButtonClick(e) {
     //0 when car is off
     if (!carFlag) {
@@ -94,6 +102,7 @@ function onBettyButtonClick(e) {
     }
 }
 bettysButton.addEventListener("click", onBettyButtonClick)
+buttonRight.addEventListener("click", buttonRightClick)
 
 var enterKeyBox = document.querySelector(".pressEnter");
 var enterPressed = 0;

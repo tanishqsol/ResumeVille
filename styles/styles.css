@@ -1,3 +1,6 @@
+*, html {
+  scroll-behavior : smooth !important
+}
 .header {
   color: white;
   font-size: 50px;
@@ -8,6 +11,7 @@
   background: #293744;
   position: fixed;
   color: #899eb5;
+
 }
 
 .scene {
@@ -840,3 +844,81 @@ body {
   color: #e04598;
 }
 /*# sourceMappingURL=styles.css.map */
+
+
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  
+}
+.one {
+  /* background: hwb(270 31% 63%); */
+  display: flex;
+  justify-content: center;
+align-items: center;
+  
+}
+#res1{
+  height: 95vh;
+  width: 42vw;
+
+}
+#arrowFirst{
+  padding-left: 5vw;
+  font-size: 2rem;
+  cursor: pointer;
+
+}
+.arrowSecond2{
+  margin-right: 4vw;
+  transform: rotate(180deg);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: -11;
+
+}
+#arrowSecond{
+  padding-right: 10px;
+}
+#res2{
+  height: 95vh;
+  width: 42vw;
+  z-index: 1;
+
+}
+.two {
+  /* background: #564e5e; */
+  display: flex;
+  justify-content: center;
+align-items: center;
+
+}
+
+.wrapper {
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    display:none;
+    display: flex;
+  flex-direction: row;
+  width: 170vw;
+
+  }
+  .outer-wrapper {
+    width: 100vh;
+  /* opacity: 0.5; */
+
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }

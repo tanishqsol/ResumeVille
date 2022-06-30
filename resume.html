@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Resume</title>
+    <link rel="stylesheet"
+          href="styles/styles.css">
+          <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+<body>
+
+    <div class = "outer-wrapper">
+        <div class="wrapper">
+            <div class="slide one" id = "firPage">
+                <img src="https://i.ibb.co/92xyhkT/Tanishq-s-Resume-new.jpg" id = "res1">
+                 <a href = "#secpage" id ="arrowFirst" alt="redarrow" onclick="popSecondArrow()"><img height ="100" class ="animate__animated animate__fadeInLeft animate__delay-3s" src="https://i.ibb.co/ysC7rL2/redarrow.png"></a>
+            </div>
+            <div class ="slide two" id = "secpage">
+
+                <a href = "#firPage" id ="arrowSecond" alt="redarrow"><img height ="100" class ="arrowSecond2" src="https://i.ibb.co/ysC7rL2/redarrow.png"></a>
+                <img src="https://i.ibb.co/kMGXPjB/resume2.jpg" id ="res2" alt="resume2">
+            </div>
+            
+        </div>
+    </div>
+    <script src="app2.js"></script>
+    <script>
+        function popSecondArrow(){
+            var secArr = document.querySelector("#arrowSecond");
+            arrowSecond.classList.add("animate__animated","animate__fadeInRight","animate__delay-3s","animate__repeat-2");
+        }
+
+    </script>
+</body>
+<!-- animate__animated animate__fadeInRight animate__delay-3s -->

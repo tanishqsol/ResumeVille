@@ -13,6 +13,8 @@ const nfv = document.querySelector(".pr3")
 const vms = document.querySelector(".pr4")
 const test = document.querySelector(".pr5")
 const netc = document.querySelector(".bannerNetc")
+const resume11 = document.querySelector("#res1")
+const resume22 = document.querySelector("#res2")
 
 function gradCapAnim() {
     var divPos = cap.getBoundingClientRect().right;
@@ -185,6 +187,40 @@ function constrVehicle() {
     }
 }
 window.addEventListener('scroll', constrVehicle);
+
+//resume
+function resume1move() {
+    var scrolled_val = $(document).scrollTop().valueOf();
+    var divPos = resume11.getBoundingClientRect().right;
+    var screenPos = window.innerWidth / 0.8;
+    if (divPos < screenPos) {
+
+        resume11.className = 'animate__animated animate__slideInRight';
+        resume11.style.setProperty('--animate-duration', '1.5s');
+        resume11.style.setProperty('opacity', '1');
+    }
+}
+window.addEventListener('scroll', resume1move);
+
+
+
+function resume2move() {
+    var scrolled_val = $(document).scrollTop().valueOf();
+    var divPos = resume22.getBoundingClientRect().right;
+    var screenPos = window.innerWidth / 0.8;
+    if (divPos < screenPos) {
+
+        resume22.className = 'animate__animated animate__slideInRight animate__fast';
+        resume22.style.setProperty('--animate-duration', '1.5s');
+        resume22.style.setProperty('opacity', '1');
+    }
+}
+window.addEventListener('scroll', resume2move);
+
+//resume
+
+
+
 
 function underConstr() {
     var scrolled_val = $(document).scrollTop().valueOf();
