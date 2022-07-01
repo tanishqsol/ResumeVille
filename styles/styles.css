@@ -865,31 +865,21 @@ align-items: center;
   
 }
 #res1{
-  height: 95vh;
-  width: 42vw;
+  height: 92vh;
+  width: 45vw;
 
 }
-#arrowFirst{
+.arrowFirst{
   padding-left: 5vw;
   font-size: 2rem;
-  cursor: pointer;
-
 }
-.arrowSecond2{
-  margin-right: 4vw;
-  transform: rotate(180deg);
+.arrowSecond{
+  padding-right: 5vw;
   font-size: 2rem;
-  cursor: pointer;
-  z-index: -11;
-
-}
-#arrowSecond{
-  padding-right: 10px;
 }
 #res2{
-  height: 95vh;
-  width: 42vw;
-  z-index: 1;
+  height: 92vh;
+  width: 45vw;
 
 }
 .two {
