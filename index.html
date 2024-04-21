@@ -6,10 +6,12 @@
     <title>PortFolio</title>
     <link rel="stylesheet"
           href="styles/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <script type="text/javascript"
-            src="/Users/tanishqsolanki/Documents/portfolioCj/app.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+
+            <script src="app.js"></script>
+            <script src="app2.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -17,7 +19,7 @@
         new WOW().init();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 
 </head>
@@ -38,9 +40,6 @@
     </div>
     </div>
 
-
-    <!-- <h1>I think you should try pressing the  &nbsp;<span> Enter </span> &nbsp;  key on your keyboard</h1>
-    </div> -->
 
     <section class="character"
              id="sticky">
@@ -66,12 +65,7 @@
 
             <div class="lines"></div>
         </div>
-        <!-- <div class="thankYou">
-            <h1>Thank<span>You</span></h1><br>
-            <h3>More content on the way</h3>
-            <h2 class="theEnd">The End</h2>
-
-        </div> -->
+        
         <div class="thankYou">
             <h1>Thank<span>You</span></h1>&nbsp;
             <h3>Email me at <a href="mailto:tanishqsolanki7@gmail.com"> tanishqsolanki7@gmail.com</a></h3>
@@ -151,22 +145,34 @@
                 <h1 class="mulDisText">MULTI-DISCIPLINARY<span> SKILLS</span></h1>
                 <!-- <img src="https://i.ibb.co/K5zd12B/multi-Skills.png"
                      class="multiSkills"> -->
-                <div class="mySkillsOne">
-                    <!-- <img src="https://i.ibb.co/16fCsXF/blank2.png" class="skillBackground"> -->
-
-                    <li>
-                        <h3>Design</h3><span class="bar"><span class="design"></span></span>
-                    </li>
-                    <li>
-                        <h3>Illustration</h3><span class="bar"><span class="illustration"></span></span>
-                    </li>
-                    <li>
-                        <h3>Code</h3><span class="bar"><span class="code"></span></span>
-                    </li>
-                    <li>
-                        <h3>Animation</h3><span class="bar"><span class="animation"></span></span>
-                    </li>
-                </div>
+                     <div class="mySkillsOne">
+                        <li>
+                            <h3>Design</h3>
+                            <div class="bar">
+                                <span class="progress_animated_des"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Illustration</h3>
+                            <div class="bar">
+                                <span class="progress_animated_ill"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Code</h3>
+                            <div class="bar">
+                                <span class="progress_animated_cod"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Animation</h3>
+                            <div class="bar">
+                                <span class="progress_animated_ani"></span>
+                            </div>
+                        </li>
+                    </div>     
+                    
+                    
             </div>
         </section>
         <section>
@@ -291,8 +297,7 @@
             smoothScrollingDuration: 200
         });
     </script>
-    <script src="app.js"></script>
-    <script src="app2.js"></script>
+   
     <script>
         if (screen.width <= 700) {
             document.location = "sample.html"
@@ -312,12 +317,12 @@
             startDelay: 1300,
             cursorChar: '<br>',
         });
-        var typed2 = new Typed('#third', {
-            strings: [" If you get tired, <span class ='enterKey'>press Enter <span class = 'strong'>key</span>"],
-            typeSpeed: 20,
-            startDelay: 1900,
-            cursorChar: '<br>',
-        });
+        // var typed3 = new Typed('#third', {
+        //     strings: [" If you get tired, <span class ='enterKey'>press Enter <span class = 'strong'>key</span>"],
+        //     typeSpeed: 20,
+        //     startDelay: 1900,
+        //     cursorChar: '<br>',
+        // });
 
     </script>
     <script>
