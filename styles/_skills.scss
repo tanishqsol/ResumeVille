@@ -46,47 +46,6 @@
 .mySkillsOne li{
     margin: 20px 0;
 }
-.bar{
-    background: #ffffff49;
-    // opacity: 0.5;
-    display: block;
-    height: 9px;
-    border: 1px solid rgba(121, 57, 57, 0.137);
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 0 0 10px #2187e7b3;
-
-}
-.bar span{
-    height: 9px;
-    float: left;
-    background: #C42948;
-}
-
-.progress_animated_des{
-    animation: anim 2s ease-out;
-    width:90%;
-}
-
-.progress_animated_ill{
-    animation: anim 2s ease-out;
-    width:80%;
-}
-.progress_animated_cod{
-    animation: anim 2s ease-out;
-    width:88%;
-}
-
-.progress_animated_ani{
-    animation: anim 2s ease-out;
-    width:85%;
-}
-@keyframes anim {
-    0%{
-        width: 0%;
-    }
-
-}
 .mulDisText{
     font-family: montserart;
     position: absolute;
@@ -96,8 +55,6 @@
     left:20%;
 span{
     color: #ff0080;
-
-    // color: #ff0000;
 }
 }
 .skillMile{
@@ -238,41 +195,3 @@ span{
     opacity: 0;
     
 }
-// #graphicsSkillsText{
-//     position: absolute;
-//     left:65%;
-//     top:50%;
-//     font-size:5vh;
-//     color: white;
-    
-// opacity: 0;
-// }
-// #designSkillBanner_animate{
-//     position: absolute;
-//     top: 0%;
-//     right:0%;
-//     // height:50%;
-//     // width:40%;
-//     animation: designAnimate 0.5s ease-out ;
-//     opacity: 1;
-    
-    
-   
-   
-// @keyframes designAnimate{
-//     0%{
-//         height:  0px;
-      
-//     }
-//     50%{
-//         height:70% ;
-       
-//     }
-  
-//     100%{
-//         opacity: 1;
-//         height:60% ;
-       
-//     }
-// }
-// }

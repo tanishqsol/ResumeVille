@@ -1,236 +1,99 @@
-var skill = document.getElementById("skills");
-var skill2 = document.querySelector("#skills2");
-var introBoxAbout = document.querySelector("#aboutMe");
-const cap = document.querySelector("#gradCap");
-const skillBanner = document.querySelector("#progSkillsBanner")
-const animSkillBanner = document.querySelector("#animSkillsBanner")
-const designSkillBanner = document.querySelector("#graphicsSkillsBanner")
-const underConstruction = document.querySelector("#underconstruction")
-const constructionVehicle = document.querySelector("#constructionVehicle")
-const rsv = document.querySelector(".pr1")
-const re = document.querySelector(".pr2")
-const nfv = document.querySelector(".pr3")
-const vms = document.querySelector(".pr4")
-const test = document.querySelector(".pr5")
-const netc = document.querySelector(".bannerNetc")
-const resume11 = document.querySelector("#res1")
-const resume22 = document.querySelector("#res2")
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = {
+    // Ensure that these selectors correctly match elements in your HTML
+    skill: document.getElementById("skills"),
+    skill2: document.querySelector("#skills2"),
+    introBoxAbout: document.querySelector("#aboutMe"),
+    cap: document.querySelector("#gradCap"),
+    skillBanner: document.querySelector("#progSkillsBanner"),
+    animSkillBanner: document.querySelector("#animSkillsBanner"),
+    designSkillBanner: document.querySelector("#graphicsSkillsBanner"),
+    underConstruction: document.querySelector("#underconstruction"),
+    constructionVehicle: document.querySelector("#constructionVehicle"),
+    // Skill bars are selected here
+    designBar: document.querySelector("#designSkill .circle"),
+    illustrationBar: document.querySelector("#illustrationSkill .circle"),
+    codeBar: document.querySelector("#codeSkill .circle"),
+    animationBar: document.querySelector("#animationSkill .circle"),
+    rsv: document.querySelector(".pr1"),
+    re: document.querySelector(".pr2"),
+    nfv: document.querySelector(".pr3"),
+    vms: document.querySelector(".pr4"),
+    test: document.querySelector(".pr5"),
+    resume11: document.querySelector("#res1"),
+    resume22: document.querySelector("#res2")
+    };
 
-function gradCapAnim() {
-    var divPos = cap.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.9;
-    if (divPos < screenPos) {
-        cap.className = 'animate__animated animate__slideInDown animate__fast';
-        cap.style.setProperty('--animate-duration', '1s');
-        cap.style.setProperty('opacity', '1');
+    function handleScrollAnimations() {
+        const screenPosRight = window.innerWidth / 0.8;
+        const screenPosLeft = window.innerWidth / 1.3;
+        // const scrolled_val = $(document).scrollTop().valueOf();
+
+        Object.keys(elements).forEach(key => {
+            const element = elements[key];
+            if (!element) return;
+
+            let divPosRight = element.getBoundingClientRect().right;
+            let divPosLeft = element.getBoundingClientRect().left;
+            
+            switch (key) {
+                case 'cap':
+                    animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInDown animate__fast', 1);
+                    break;
+                case 'netc':
+                    animateElement(element, divPosLeft, screenPosLeft, '', 1, 'opacity', "1");
+                    break;
+                case 'skillBanner':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInDown animate__fast', 1);
+                break;
+                case 'animSkillBanner':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInDown animate__fast', 1);
+                break;
+                case 'designSkillBanner':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInDown animate__fast', 1);
+                break;
+                case 'underConstruction':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInTop animate__fast', 1);
+                break;
+                case 'bar':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInTop animate__fast', 1);
+                break;
+                case 'constructionVehicle':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInRight animate__slow', 1);
+                break;
+                // case 'test':
+                //     animateElement(element, 'animate__animated animate__slideInRight animate__fast');
+                //     break;
+                // case 'animationBar':
+                //     animateSkillBar(element);
+                //     break;
+                //     case 'designBar':
+                //     animateSkillBar(element);
+                //     break;
+                //     case 'illustrationBar':
+                //     animateSkillBar(element);
+                //     break;
+                //     case 'codeBar':
+                //     animateSkillBar(element);
+                //     break;
+                case 'resume22':
+                case 'rsv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
+                case 're':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
+                case 'test':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
+                case 'vms':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
+                case 'nfv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
+
+            }
+        });
     }
-}
-// $(document).scroll(gradCapAnim)
-window.addEventListener('scroll', gradCapAnim);
 
-function showEnterDiv() {
-    var divPos = netc.getBoundingClientRect().left;
-    var screenPos = window.innerWidth / 1.3;
-    if (divPos < screenPos) {
-        enterKeyBox.style.opacity = "1"
-
+    function animateElement(element, divPos, screenPos, animationClass, duration = 1.5, styleProp = 'opacity', styleValue = '1') {
+        if (divPos < screenPos) {
+            element.className = animationClass;
+            element.style.setProperty('--animate-duration', `${duration}s`);
+            element.style.setProperty(styleProp, styleValue);
+        }
     }
-}
-window.addEventListener('scroll', showEnterDiv);
 
-const des = document.querySelector(".design");
-const ill = document.querySelector(".illustration");
-const cod = document.querySelector(".code");
-const ani = document.querySelector(".animation");
-function multiSkills() {
-    var divPos = des.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 1.2;
-    if (divPos < screenPos) {
-        des.className = 'progress_animated_des';
-        ill.className = 'progress_animated_ill';
-        cod.className = 'progress_animated_cod';
-        ani.className = 'progress_animated_ani';
-
-    }
-}
-window.addEventListener('scroll', multiSkills);
-
-function skillBanner1() {
-    var divPos = skillBanner.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.8;
-    if (divPos < screenPos) {
-        // if (scrolled_val >= 17573) {
-        // skillBanner.id = 'progSkillBanner_animate';
-        skillBanner.className = 'animate__animated animate__slideInDown animate__fast';
-        skillBanner.style.setProperty('--animate-duration', '1s');
-        skillBanner.style.setProperty('opacity', '1');
-
-        // skillBanner.className = 'animate__animated animate__swing';
-    }
-}
-window.addEventListener('scroll', skillBanner1);
-
-function animSkillBanner1() {
-    var scrolled_val = $(document).scrollTop().valueOf();
-    var divPos = animSkillBanner.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.8;
-    if (divPos < screenPos) {
-        // if (scrolled_val >= 17573) {
-        // animSkillBanner.id = 'animSkillBanner_animate';
-        animSkillBanner.className = 'animate__animated animate__slideInDown animate__fast';
-        animSkillBanner.style.setProperty('--animate-duration', '1s');
-        animSkillBanner.style.setProperty('opacity', '1');
-        // animSkillBanner.className = 'animate__animated animate__swing';
-    }
-}
-window.addEventListener('scroll', animSkillBanner1);
-
-// function skillBanner1Text() {
-//     var divPos = skillBannerText.getBoundingClientRect().right;
-//     var screenPos = window.innerWidth / 1;
-//     if (divPos < screenPos) {
-//         skillBannerText.className = 'animate__animated animate__fadeInRight';
-//         // skillBanner.className = 'animate__animated animate__swing';
-//     }
-// }
-// window.addEventListener('scroll', skillBanner1Text);
-
-// function animSkillBanner1Text() {
-//     var divPos = animSkillBannerText.getBoundingClientRect().right;
-//     var screenPos = window.innerWidth / 1;
-//     if (divPos < screenPos) {
-//         animSkillBannerText.className = 'animate__animated animate__fadeInDown';
-//         // skillBanner.className = 'animate__animated animate__swing';
-//     }
-// }
-// window.addEventListener('scroll', animSkillBanner1Text);
-
-// function designSkillBannerTextAnim() {
-//     var divPos = designSkillBannerText.getBoundingClientRect().right;
-//     var screenPos = window.innerWidth / 0.9;
-//     if (divPos < screenPos) {
-//         designSkillBannerText.className = 'animate__animated animate__fadeInDown';
-//         // skillBanner.className = 'animate__animated animate__swing';
-//     }
-// }
-// window.addEventListener('scroll', designSkillBannerTextAnim);
-
-function graphicsSkillBanner1() {
-    var divPos = designSkillBanner.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.8;
-    if (divPos < screenPos) {
-        designSkillBanner.className = 'animate__animated animate__slideInDown animate__fast';
-        designSkillBanner.style.setProperty('--animate-duration', '1s');
-        designSkillBanner.style.setProperty('opacity', '1');
-
-        // designSkillBanner.id = 'designSkillBanner_animate';
-        // skillBanner.className = 'animate__animated animate__swing';
-    }
-}
-window.addEventListener('scroll', graphicsSkillBanner1);
-
-function pr11() {
-    var divPos = rsv.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.8;
-    if (divPos < screenPos) {
-        rsv.className = 'animate__animated animate__backInUp';
-        // skillBanner.className = 'animate__animated animate__swing';
-    }
-}
-window.addEventListener('scroll', pr11);
-function pr12() {
-    var divPos = re.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.7;
-    if (divPos < screenPos) {
-        re.className = 'animate__animated animate__backInUp';
-        // skillBanner.className = 'animate__animated animate__swing';
-    }
-}
-window.addEventListener('scroll', pr12);
-function pr13() {
-    var divPos = nfv.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.7;
-    if (divPos < screenPos) {
-        nfv.className = 'animate__animated animate__backInUp';
-        // skillBanner.className = 'animate__animated animate__swing';
-    }
-}
-window.addEventListener('scroll', pr13);
-function pr14() {
-    var divPos = vms.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.7;
-    if (divPos < screenPos) {
-        vms.className = 'animate__animated animate__backInUp';
-        // skillBanner.className = 'animate__animated animate__swing';
-    }
-}
-window.addEventListener('scroll', pr14);
-function pr15() {
-    var divPos = test.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.7;
-    if (divPos < screenPos) {
-        test.className = 'animate__animated animate__backInUp';
-        // skillBanner.className = 'animate__animated animate__swing';
-    }
-}
-window.addEventListener('scroll', pr15);
-
-function constrVehicle() {
-    var scrolled_val = $(document).scrollTop().valueOf();
-    var divPos = constructionVehicle.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.8;
-    if (divPos < screenPos) {
-
-        constructionVehicle.className = 'animate__animated animate__slideInRight animate__fast';
-        constructionVehicle.style.setProperty('--animate-duration', '1.5s');
-        constructionVehicle.style.setProperty('opacity', '1');
-    }
-}
-window.addEventListener('scroll', constrVehicle);
-
-//resume
-function resume1move() {
-    var scrolled_val = $(document).scrollTop().valueOf();
-    var divPos = resume11.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.8;
-    if (divPos < screenPos) {
-
-        resume11.className = 'animate__animated animate__slideInRight';
-        resume11.style.setProperty('--animate-duration', '1.5s');
-        resume11.style.setProperty('opacity', '1');
-    }
-}
-window.addEventListener('scroll', resume1move);
+    window.addEventListener('scroll', handleScrollAnimations);
+    handleScrollAnimations();
+});
 
 
 
-function resume2move() {
-    var scrolled_val = $(document).scrollTop().valueOf();
-    var divPos = resume22.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.8;
-    if (divPos < screenPos) {
+document.addEventListener('DOMContentLoaded', initAnimations);
 
-        resume22.className = 'animate__animated animate__slideInRight animate__fast';
-        resume22.style.setProperty('--animate-duration', '1.5s');
-        resume22.style.setProperty('opacity', '1');
-    }
-}
-window.addEventListener('scroll', resume2move);
-
-//resume
-
-
-
-
-function underConstr() {
-    var scrolled_val = $(document).scrollTop().valueOf();
-    var divPos = underConstruction.getBoundingClientRect().right;
-    var screenPos = window.innerWidth / 0.8;
-    if (divPos < screenPos) {
-
-        underConstruction.className = 'animate__animated animate__backInUp animate__fast';
-        underConstruction.style.setProperty('--animate-duration', '1s');
-        underConstruction.style.setProperty('opacity', '1');
-    }
-}
-window.addEventListener('scroll', underConstr);
