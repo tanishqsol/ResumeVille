@@ -622,7 +622,7 @@ body {
   height: 70%;
   width: 70%;
   opacity: 0;
-  z-index: 22;
+  z-index: 222;
 }
 
 .pressEnter h1 {
@@ -740,12 +740,16 @@ body {
 }
 
 .thankYou {
+  display: flex;
   height: 50%;
   position: fixed;
   opacity: 0;
   bottom: 10vh;
   left: 10vw;
   width: 50%;
+}
+.resume{
+  width: 100%;
 }
 
 .thankYou h1 {
@@ -827,7 +831,7 @@ align-items: center;
 #res2{
   height: 92vh;
   width: 45vw;
-
+  padding: 10px;
 }
 .two {
   /* background: #564e5e; */
@@ -871,19 +875,40 @@ align-items: center;
   float: left;
   background: #C42948;
 }
-.progress_animated_des{
+
+.progress_animated_des {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
   width: 90%;
 }
-.progress_animated_ill{
 
+.progress_animated_ill {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
   width: 80%;
-
 }
-.progress_animated_cod{
+
+.progress_animated_cod {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 68%;
+}
+
+.progress_animated_ani {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
   width: 85%;
-
 }
-.progress_animated_ani{
-  width: 80%;
 
+@-webkit-keyframes anim {
+  0% {
+    width: 0%;
+  }
 }
+
+@keyframes anim {
+  0% {
+    width: 0%;
+  }
+}
+

@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
     designSkillBanner: document.querySelector("#graphicsSkillsBanner"),
     underConstruction: document.querySelector("#underconstruction"),
     constructionVehicle: document.querySelector("#constructionVehicle"),
+    enterKey: document.querySelector(".pressEnter"),
     // Skill bars are selected here
+    allSkills: document.querySelector(".mySkillsOne"),
     designBar: document.querySelector("#designSkill .circle"),
     illustrationBar: document.querySelector("#illustrationSkill .circle"),
     codeBar: document.querySelector("#codeSkill .circle"),
@@ -70,7 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 //     case 'codeBar':
                 //     animateSkillBar(element);
                 //     break;
-                case 'resume22':
+                case 'vallSkills':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
+                case 'enterKey':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
                 case 'rsv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
                 case 're':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
                 case 'test':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
@@ -88,12 +91,43 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.setProperty(styleProp, styleValue);
         }
     }
+    function gradCapAnim() {
+        const cap2 = document.querySelector("#gradCap");
 
+        var divPos = cap2.getBoundingClientRect().right;
+        var screenPos = window.innerWidth / 0.9;
+        if (divPos < screenPos) {
+            cap2.className = 'animate__animated animate__slideInDown animate__fast';
+            cap2.style.setProperty('--animate-duration', '1s');
+            cap2.style.setProperty('opacity', '1');
+        }
+    }
+    // $(document).scroll(gradCapAnim)
+    window.addEventListener('scroll', gradCapAnim);
+    
+    
+    function multiSkills() {
+        const des = document.querySelector(".des");
+    const ill = document.querySelector(".ill");
+    const cod = document.querySelector(".cod");
+    const ani = document.querySelector(".ani");
+        var divPos = des.getBoundingClientRect().right;
+        var screenPos = window.innerWidth / 1.2;
+        if (divPos < screenPos) {
+            des.className = 'progress_animated_des';
+            ill.className = 'progress_animated_ill';
+            cod.className = 'progress_animated_cod';
+            ani.className = 'progress_animated_ani';
+    
+        }
+    }
+    window.addEventListener('DOMContentLoaded', multiSkills())
+
+    window.addEventListener('scroll', multiSkills);
     window.addEventListener('scroll', handleScrollAnimations);
     handleScrollAnimations();
 });
 
 
 
-document.addEventListener('DOMContentLoaded', initAnimations);
 
