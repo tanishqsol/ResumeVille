@@ -73,12 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 //     animateSkillBar(element);
                 //     break;
                 case 'vallSkills':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
-                case 'enterKey':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
-                case 'rsv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
-                case 're':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
-                case 'test':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
-                case 'vms':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
-                case 'nfv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
+                case 'enterKey':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
+                case 'rsv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
+                case 're':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
+                case 'test':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
+                case 'vms':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
+                case 'nfv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
 
             }
         });
