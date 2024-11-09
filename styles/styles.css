@@ -1,4 +1,4 @@
-/* Base Styles (Desktop) */
+
 .header {
   color: white;
   font-size: 50px;
@@ -9,135 +9,906 @@
   background: #293744;
   position: fixed;
   color: #899eb5;
+
 }
 
-.scene, .character {
-  position: fixed;
-  width: 100%;
+.scene {
   height: 100%;
+  width: 100%;
+  background: #EAEAEA;
+  position: fixed;
 }
 
-.viewer, .bettyCar, .bettyCarBack {
+.character {
+  position: fixed;
+  z-index: 19;
+  width: 100%;
+  bottom: 0px;
+  height: 207px;
+}
+
+#preloader {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  background-color: white;
+  position: fixed;
+  opacity: 1;
+}
+
+.preloaderPageVanish {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  background-color: white;
+  position: fixed;
+  opacity: 0;
+  -webkit-animation: preloaderPageVanished 1s forwards;
+          animation: preloaderPageVanished 1s forwards;
+}
+
+@-webkit-keyframes preloaderPageVanished {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes preloaderPageVanished {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loaderGifVanish {
+  -webkit-animation: animPreloaderScreen 1s forwards;
+          animation: animPreloaderScreen 1s forwards;
+}
+
+@-webkit-keyframes animPreloaderScreen {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes animPreloaderScreen {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.viewer {
+  height: 227px;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right: 122px;
+  max-width: calc(15593px/120);
+  background-image: url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  z-index: 11;
+  bottom: 65px;
+}
+
+.bettyCar {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right: 122px;
   width: 65vh;
   height: 25vh;
+  background-image: url("https://i.ibb.co/BP3htBB/front-Pin-Clipart-com-free-clip-arts-1269067.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 12;
+  bottom: 65px;
+  opacity: 0;
+  -webkit-animation: animateCar 0.5s infinite;
+          animation: animateCar 0.5s infinite;
 }
 
-/* Responsive Styles */
+.bettyCarBack {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right: 122px;
+  width: 65vh;
+  height: 25vh;
+  background-image: url("https://i.ibb.co/TrN7Gxw/Pin-Clipart-com-free-clip-arts-1269067.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 12;
+  bottom: 65px;
+  opacity: 0;
+  -webkit-animation: animateCar 0.5s infinite;
+          animation: animateCar 0.5s infinite;
+}
 
-/* Tablet (max-width: 1024px) */
-@media (max-width: 1024px) {
-  .header {
-    font-size: 40px;
+@-webkit-keyframes animateCar {
+  0% {
+    height: 25vh;
   }
+  100% {
+    height: 25.2vh;
+  }
+}
+
+@keyframes animateCar {
+  0% {
+    height: 25vh;
+  }
+  100% {
+    height: 25.2vh;
+  }
+}
+
+.bettyButton {
+  margin-left: 20px;
+  margin-top: 20px;
+  position: fixed;
+  z-index: 10;
+}
+
+.bettyButton .bettyButtonFrontFace {
+  height: 11vh;
+  width: 14vh;
+  position: absolute;
+}
+
+.bettyButton .bettyButtonCar {
+  height: 11vh;
+  width: 14vh;
+  position: absolute;
+}
+
+.viewer_back {
+  height: 227px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  position: absolute;
+  margin-left: 40%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right: 122px;
+  max-width: calc(16593px/120);
+  background-image: url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  z-index: 11;
+  bottom: 65px;
+}
+
+.foothPath {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100px;
+  background-image: url("https://i.ibb.co/LCb3rTj/finalfinalfinal-Footpath-Black.png");
+  background-repeat: repeat-x;
+  bottom: 50px;
+  left: 0;
+  background-position: 20px;
+}
+
+.road {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100px;
+  background: #525252;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+  bottom: 0px;
+}
+
+.roadAbove {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #666139;
+  background: #646464;
+  background-size: contain;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective 120px rotateX(20deg);
+          transform: perspective 120px rotateX(20deg);
+  bottom: 100px;
+}
+
+.railings {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 90%;
+  background-image: url("https://i.ibb.co/tKYYSX8/Untitled-3raillong.png");
+  background-repeat: repeat-x;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-position: 90px;
+  bottom: 85px;
+}
+
+.lines {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateX(2deg) perspective(190px);
+          transform: rotateX(2deg) perspective(190px);
+  height: 10px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #fff), color-stop(70%, #fff), color-stop(70%, #525252), to(#525252));
+  background: linear-gradient(90deg, #fff 10%, #fff 70%, #525252 70%, #525252 100%);
+  background-size: 120px;
+}
+
+#clouds {
+  width: 100%;
+  min-height: 190px;
+  position: fixed;
+  top: 0;
+  background-repeat: repeat-x;
+  left: 0;
+  z-index: -100;
+}
+
+.grass {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/grass_tile-tinypng.png") repeat-x transparent;
+  position: fixed;
+  background-attachment: scroll;
+  bottom: 60px;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 200px;
+  border: 0 none transparent;
+  outline: 0 none transparent;
+}
+
+.house1 {
+  bottom: 145px;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+  height: 30vh;
+}
+
+.hill1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hill2 {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  z-index: 9;
+}
+
+.main-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container section {
+  min-width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.main-container section .multiSkills {
+  position: absolute;
+  font-size: 5vh;
+  color: white;
+  top: 5%;
+  left: 33%;
+}
+
+.main-container section .page6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.resumeVille {
+  position: absolute;
+  height: 90vh;
+  left: 30%;
+  bottom: 10px;
+}
+
+.page9section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.page10section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.lastPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page11section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@font-face {
+  font-family: montserart;
+  src: url(Montserrat-Bold.otf);
+}
+
+@font-face {
+  font-family: raleway;
+  src: url(Raleway-Regular.ttf);
+}
+
+.mySkillsOne {
+  left: 20%;
+  position: absolute;
+  /* margin: 60px auto; */
+  width: 50%;
+  height: 50%;
+  z-index: 2;
+  bottom: 20%;
+  color: white;
+  font-family: raleway;
+  list-style: none;
+}
+
+.skillBackground {
+  position: absolute;
+  z-index: 1;
+}
+
+.mySkillsOne li {
+  margin: 20px 0;
+}
+
+
+
+.mulDisText {
+  font-family: montserart;
+  position: absolute;
+  color: #ffffff;
+  top: 10%;
+  font-size: 45px;
+  left: 20%;
+}
+
+.mulDisText span {
+  color: #ff0080;
+}
+
+.skillMile {
+  position: absolute;
+  bottom: 140px;
+  height: 35%;
+  right: 0%;
+  z-index: 10;
+}
+
+.pole1 {
+  height: 100%;
+  left: 5%;
+  bottom: 0;
+  width: 8%;
+  position: absolute;
+  z-index: 2;
+}
+
+.pole2 {
+  height: 100%;
+  z-index: 100;
+  right: 0%;
+  bottom: 0;
+  width: 8%;
+  position: absolute;
+}
+
+#progSkillsText {
+  font-size: 5vh;
+  color: white;
+  position: absolute;
+  left: 35%;
+  top: 55%;
+  opacity: 0;
+}
+
+#progSkillsBanner {
+  position: absolute;
+  top: 0%;
+  left: 30%;
+  height: 50vh;
+  width: 30vw;
+  opacity: 0;
+}
+
+#animSkillsBanner {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  height: 50vh;
+  width: 30vw;
+  opacity: 0;
+}
+
+#graphicsSkillsBanner {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  height: 50vh;
+  width: 30vw;
+  opacity: 0;
+}
+
+#gradCap {
+  position: absolute;
+  top: 0%;
+  opacity: 0;
+  left: 30%;
+  height: 60vh;
+  width: 40vw;
+}
+
+.eduMile {
+  position: absolute;
+  bottom: 140px;
+  height: 35%;
+  right: 0;
+  z-index: 10;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: montserart;
+  src: url(Montserrat-Bold.otf);
+}
+
+@font-face {
+  font-family: raleway;
+  src: url(Raleway-Regular.ttf);
+}
+
+body {
+  background-color: #0974b362;
+  background-image: url("https://i.ibb.co/hy6VHW1/yoyoyoyo34.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  font-family: 'Bulletto';
+}
+
+.introBox {
+  position: absolute;
+  bottom: 10px;
+  height: 100%;
+  width: 50%;
+  left: 30%;
+  z-index: 1;
+}
+
+.orangeBoxDiv {
+  position: absolute;
+  z-index: 10;
+  height: 70%;
+  width: 30%;
+  bottom: 40%;
+  left: 50%;
+}
+
+.orangeBoxDiv .orangeBox {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 50%;
+}
+
+.pressEnter {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5vh;
+  margin-left: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70%;
+  width: 70%;
+  opacity: 0;
+  z-index: 222;
+}
+
+.pressEnter h1 {
+  color: #d8dbe7;
+  font-family: montserart;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pressEnter span {
+  color: #ff097c;
+}
+
+.hillLanding {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  z-index: 0;
+}
+
+.office {
+  position: absolute;
+  bottom: 90px;
+  left: 0%;
+  height: 60%;
+  width: 60%;
+  z-index: 1;
+}
+
+.bannerNetc {
+  position: absolute;
+  bottom: 100px;
+  right: 3%;
+  height: 70%;
+  width: 50%;
+}
+
+.expMileStone {
+  position: absolute;
+  bottom: 140px;
+  height: 35%;
+  right: -5%;
+}
+
+#aboutMe {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  height: 60vh;
+  width: 40vw;
+  opacity: 0;
+}
+
+.rsvProject {
+  height: 30vh;
+  width: 30vw;
+}
+
+.ruleEngProject {
+  height: 30vh;
+  width: 30vw;
+}
+
+.nfvProject {
+  height: 30vh;
+  width: 30vw;
+}
+
+.vmsProject {
+  margin-right: 12vw;
+  height: 30vh;
+  width: 30vw;
+}
+
+.testingProject {
+  height: 30vh;
+  width: 30vw;
+}
+
+.projMile {
+  position: absolute;
+  bottom: 140px;
+  height: 45%;
+  left: 20%;
+  z-index: 10;
+}
+
+.pr1, .pr2, .pr3, .pr4, .pr5 {
+  opacity: 0;
+}
+
+#underconstruction {
+  position: absolute;
+  right: 0;
+  height: 300px;
+  width: 300px;
+  bottom: 10%;
+  opacity: 0;
+}
+
+#constructionVehicle {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  height: 400px;
+  width: 700px;
+  opacity: 0;
+}
+
+.thankYou {
+  display: flex;
+  height: 50%;
+  position: fixed;
+  opacity: 0;
+  bottom: 10vh;
+  left: 10vw;
+  width: 50%;
+}
+.resume{
+  width: 100%;
+}
+
+.thankYou h1 {
+  font-size: 50px;
+  font-family: montserart;
+  color: black;
+}
+
+.thankYou h1 span {
+  color: crimson;
+}
+
+.thankYou h3 {
+  font-size: 40px;
+  font-family: raleway;
+  color: white;
+}
+
+.thankYou .theEnd {
+  color: crimson;
+  font-family: montserart;
+  padding-top: 20px;
+  font-size: 35px;
+}
+
+#typedd {
+  position: absolute;
+  height: 30%;
+  font-family: montserart;
+  z-index: 11;
+  width: 39%;
+  top: 20vh;
+  left: 11vw;
+  color: whitesmoke;
+  font-size: x-large;
+}
+
+#typedd .enterKey {
+  color: #ff0062;
+}
+
+#typedd .strong {
+  color: #e04598;
+}
+/*# sourceMappingURL=styles.css.map */
+
+
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
   
-  .section {
-    height: 600px;
-    font-size: 1.2em;
-  }
+}
+.one {
+  /* background: hwb(270 31% 63%); */
+  display: flex;
+  justify-content: center;
+align-items: center;
   
-  .viewer, .bettyCar, .bettyCarBack {
-    width: 55vh;
-    height: 20vh;
-  }
+}
+#res1{
+  height: 92vh;
+  width: 45vw;
 
-  .thankYou h1 {
-    font-size: 30px;
-  }
+}
+.arrowFirst{
+  padding-left: 5vw;
+  font-size: 2rem;
+}
+.arrowSecond{
+  padding-right: 5vw;
+  font-size: 2rem;
+}
+#res2{
+  height: 92vh;
+  width: 45vw;
+  padding: 10px;
+}
+.two {
+  /* background: #564e5e; */
+  display: flex;
+  justify-content: center;
+align-items: center;
 
-  .mySkillsOne li {
-    font-size: 1em;
-    margin: 10px 0;
+}
+
+.container {
+  display: flex;
+  gap: 25%;
+}
+
+.circular-pbar {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.circular-pbar svg {
+  transform: rotate(-90deg);
+}
+
+.circular-pbar circle {
+  transition: stroke-dasharray 2s, stroke-dashoffset 2s;
+  transform-origin: 50% 50%;
+}
+.bar {
+  background: #ffffff49;
+  display: block;
+  height: 9px;
+  border: 1px solid rgba(121, 57, 57, 0.137);
+  overflow: hidden;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px #2187e7b3;
+          box-shadow: 0 0 10px #2187e7b3;
+}
+
+.bar span {
+  height: 9px;
+  float: left;
+  background: #C42948;
+}
+
+.progress_animated_des {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 90%;
+}
+
+.progress_animated_ill {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 80%;
+}
+
+.progress_animated_cod {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 68%;
+}
+
+.progress_animated_ani {
+  -webkit-animation: anim 2s ease-out;
+          animation: anim 2s ease-out;
+  width: 85%;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    width: 0%;
   }
 }
 
-/* Mobile (max-width: 768px) */
-@media (max-width: 768px) {
-  .header {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .section {
-    position: relative;
-    height: auto;
-    padding: 20px;
-  }
-
-  .scene {
-    position: relative;
-  }
-
-  .character, .viewer, .bettyCar, .bettyCarBack {
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .mySkillsOne {
-    width: 80%;
-    left: 10%;
-  }
-
-  .thankYou {
-    width: 90%;
-    left: 5%;
-    bottom: 20px;
-  }
-
-  .thankYou h1 {
-    font-size: 24px;
-  }
-
-  .container {
-    flex-direction: column;
-    gap: 10%;
-  }
-
-  .mulDisText {
-    font-size: 32px;
-    left: 10%;
-    top: 5%;
+@keyframes anim {
+  0% {
+    width: 0%;
   }
 }
 
-/* Small Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-  .header {
-    font-size: 24px;
-    padding: 10px;
-  }
-
-  .section {
-    padding: 10px;
-  }
-
-  .mySkillsOne li {
-    font-size: 0.8em;
-  }
-
-  .thankYou {
-    width: 100%;
-    bottom: 10px;
-    left: 0;
-    padding: 10px;
-  }
-
-  .thankYou h1 {
-    font-size: 20px;
-  }
-
-  .mulDisText {
-    font-size: 24px;
-    text-align: center;
-    left: 0;
-  }
-
-  .bar {
-    height: 6px;
-  }
-
-  .viewer, .bettyCar, .bettyCarBack {
-    width: 100%;
-    height: auto;
-  }
-}
