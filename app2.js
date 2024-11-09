@@ -1,133 +1,260 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const elements = {
-    // Ensure that these selectors correctly match elements in your HTML
-    skill: document.getElementById("skills"),
-    skill2: document.querySelector("#skills2"),
-    introBoxAbout: document.querySelector("#aboutMe"),
-    cap: document.querySelector("#gradCap"),
-    skillBanner: document.querySelector("#progSkillsBanner"),
-    animSkillBanner: document.querySelector("#animSkillsBanner"),
-    designSkillBanner: document.querySelector("#graphicsSkillsBanner"),
-    underConstruction: document.querySelector("#underconstruction"),
-    constructionVehicle: document.querySelector("#constructionVehicle"),
-    enterKey: document.querySelector(".pressEnter"),
-    // Skill bars are selected here
-    allSkills: document.querySelector(".mySkillsOne"),
-    designBar: document.querySelector("#designSkill .circle"),
-    illustrationBar: document.querySelector("#illustrationSkill .circle"),
-    codeBar: document.querySelector("#codeSkill .circle"),
-    animationBar: document.querySelector("#animationSkill .circle"),
-    rsv: document.querySelector(".pr1"),
-    re: document.querySelector(".pr2"),
-    nfv: document.querySelector(".pr3"),
-    vms: document.querySelector(".pr4"),
-    test: document.querySelector(".pr5"),
-    resume11: document.querySelector("#res1"),
-    resume22: document.querySelector("#res2")
-    };
 
-    function handleScrollAnimations() {
-        const screenPosRight = window.innerWidth / 0.8;
-        const screenPosLeft = window.innerWidth / 1.3;
-        // const scrolled_val = $(document).scrollTop().valueOf();
-
-        Object.keys(elements).forEach(key => {
-            const element = elements[key];
-            if (!element) return;
-
-            let divPosRight = element.getBoundingClientRect().right;
-            let divPosLeft = element.getBoundingClientRect().left;
-            
-            switch (key) {
-                case 'cap':
-                    animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInDown animate__fast', 1);
-                    break;
-                case 'netc':
-                    animateElement(element, divPosLeft, screenPosLeft, '', 1, 'opacity', "1");
-                    break;
-                case 'skillBanner':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInDown animate__fast', 1);
-                break;
-                case 'animSkillBanner':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInDown animate__fast', 1);
-                break;
-                case 'designSkillBanner':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInDown animate__fast', 1);
-                break;
-                case 'underConstruction':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInTop animate__fast', 1);
-                break;
-                case 'bar':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInTop animate__fast', 1);
-                break;
-                case 'constructionVehicle':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__slideInRight animate__slow', 1);
-                break;
-                // case 'test':
-                //     animateElement(element, 'animate__animated animate__slideInRight animate__fast');
-                //     break;
-                // case 'animationBar':
-                //     animateSkillBar(element);
-                //     break;
-                //     case 'designBar':
-                //     animateSkillBar(element);
-                //     break;
-                //     case 'illustrationBar':
-                //     animateSkillBar(element);
-                //     break;
-                //     case 'codeBar':
-                //     animateSkillBar(element);
-                //     break;
-                case 'vallSkills':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__slow', 1);break;
-                case 'enterKey':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
-                case 'rsv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
-                case 're':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
-                case 'test':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
-                case 'vms':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
-                case 'nfv':animateElement(element, divPosRight, screenPosRight, 'animate__animated animate__backInUp animate__fast', 1);break;
-
-            }
-        });
-    }
-
-    function animateElement(element, divPos, screenPos, animationClass, duration = 1.5, styleProp = 'opacity', styleValue = '1') {
-        if (divPos < screenPos) {
-            element.className = animationClass;
-            element.style.setProperty('--animate-duration', `${duration}s`);
-            element.style.setProperty(styleProp, styleValue);
-        }
-    }
-    function gradCapAnim() {
-        const cap2 = document.querySelector("#gradCap");
-
-        var divPos = cap2.getBoundingClientRect().right;
-        var screenPos = window.innerWidth / 0.9;
-        if (divPos < screenPos) {
-            cap2.className = 'animate__animated animate__slideInDown animate__fast';
-            cap2.style.setProperty('--animate-duration', '1s');
-            cap2.style.setProperty('opacity', '1');
-        }
-    }
-    // $(document).scroll(gradCapAnim)
-    window.addEventListener('scroll', gradCapAnim);
-    
-    
-    function multiSkills() {
-        const des = document.querySelector(".des");
-    const ill = document.querySelector(".ill");
-    const cod = document.querySelector(".cod");
-    const ani = document.querySelector(".ani");
-        var divPos = des.getBoundingClientRect().right;
-        var screenPos = window.innerWidth / 1.2;
-        if (divPos < screenPos) {
-            des.className = 'progress_animated_des';
-            ill.className = 'progress_animated_ill';
-            cod.className = 'progress_animated_cod';
-            ani.className = 'progress_animated_ani';
-    
-        }
-    }
-    window.addEventListener('DOMContentLoaded', multiSkills())
-
-    window.addEventListener('scroll', multiSkills);
-    window.addEventListener('scroll', handleScrollAnimations);
-    handleScrollAnimations();
-});
+.header {
+  color: white;
+  font-size: 50px;
+}
+.section {
+  height: 800px;
+  background: #293744;
+  position: fixed;
+  color: #899eb5;
+}
+.scene {
+  height: 100%;
+  width: 100%;
+  background: #EAEAEA;
+  position: fixed;
+}
+.character{
+  position: fixed;
+  // border: 1px solid black;
+  z-index: 19;
+  width: 100%;
+  bottom:0px;
+  height: 207px;
+}
+#preloader{
+  height:100%;
+  width:100%;
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+  z-index: 100;
+  background-color:rgb(255, 255, 255)  ;
+  position: fixed;
+  opacity: 1;
+  
+}
+.preloaderPageVanish{
+  height:100%;
+  width:100%;
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+  z-index: 100;
+  background-color:rgb(255, 255, 255)  ;
+  position: fixed;
+  opacity: 0;
+  animation: preloaderPageVanished 1s forwards;
+}
+@keyframes preloaderPageVanished{
+  
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 
+.loaderGifVanish{
+  animation: animPreloaderScreen 1s forwards;
+}
+@keyframes animPreloaderScreen{
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.viewer {
+  height: 227px;
+  // border: 1px solid black;
+  position: absolute;
+  margin-left: 40%;
+  // transform: scaleX(-1);
+  margin-top: auto;
+  margin-right: auto;
+  padding-right:122px ;
+  max-width:  calc(15593px/120);
+  // width:  100%;
+  background-image:url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
+  // opacity: 0;
+  background-repeat:no-repeat;
+  background-position: 0 50%;
+  z-index: 11;
+  bottom:65px;
+  // animation: animateGirlForward steps(6) 1 ;
+}
+.bettyCar
+{
+  // border: 1px solid black;
+  position: absolute;
+  margin-left: 30%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right:122px ;
+  width:65vh;
+  height: 25vh;
+  background-image:url("https://i.ibb.co/BP3htBB/front-Pin-Clipart-com-free-clip-arts-1269067.png");
+  background-repeat:no-repeat;
+  background-size: contain;
+  // background-position: 0 50%;
+  z-index: 12;
+  bottom:65px;
+  opacity: 0;
+  animation: animateCar 0.5s infinite;
 
+}
+.bettyCarBack
+{
+  // border: 1px solid black;
+  position: absolute;
+  margin-left: 30%;
+  margin-top: auto;
+  margin-right: auto;
+  padding-right:122px ;
+  width:65vh;
+  height: 25vh;
+  background-image:url("https://i.ibb.co/TrN7Gxw/Pin-Clipart-com-free-clip-arts-1269067.png");
+  background-repeat:no-repeat;
+  background-size: contain;
+  // background-position: 0 50%;
+  z-index: 12;
+  bottom:65px;
+  opacity: 0;
+  animation: animateCar 0.5s infinite;
+
+}
+
+@keyframes animateCar {
+  0%{
+    height: 25vh ;
+  }
+  100%{
+    height: 25.1vh;
+  }
+}
+
+
+.bettyButton{
+  margin-left: 20px;
+  margin-top: 20px;
+  position: fixed;
+  z-index: 10;
+  
+  .bettyButtonFrontFace{
+    height: 11vh;
+    width:14vh;
+    position: absolute;
+    // opacity: 0;
+  }
+  .bettyButtonCar{
+    height: 11vh;
+    width:14vh;
+    position: absolute;
+    // opacity: 0;
+  }
+}
+
+
+.viewer_back {
+  height: 227px;
+  transform: scaleX(-1);
+  position: absolute;
+  margin-left: 40%;
+  margin-top: auto;
+  margin-right: auto;
+  // padding-left: ;
+  padding-right:122px ;
+  max-width:  calc(16593px/120);
+  // max-width:  calc(15593px/90);
+  // width:  100%;
+  background-image:url("https://i.ibb.co/sCvDJ2g/final-To-Use.png");
+  // background-image:url("https://i.ibb.co/thkBzyc/stripe-Final-Back.png");
+  background-repeat:no-repeat;
+  background-position: 0 50%;
+  // border:1px solid black;
+  z-index: 11;
+  
+  bottom:65px;
+}
+
+
+.foothPath{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height:100px;
+  // background: #525252;
+  background-image: url("https://i.ibb.co/LCb3rTj/finalfinalfinal-Footpath-Black.png");
+  background-repeat: repeat-x;
+  // background-size: contain;
+  // transform-origin:bottom;
+  // transform-style:preserve-3d;
+  // transform: rotateX(20deg);
+  bottom: 50px;
+  left: 0;
+  background-position: 20px;
+  // background-size:1420px ;
+  // border:1px solid black;
+}
+.road{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height:100px;
+  background: #525252;
+  transform-origin:bottom;
+  transform-style:preserve-3d;
+  transform: rotateX(20deg);
+  bottom: 0px;
+  // border:1px solid black;
+}
+.roadAbove{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height:50px;
+  border: 2px solid rgb(102, 97, 57);
+  background: #646464;
+  // background-image: url("https://i.ibb.co/Jys7c7G/sideroad.jpg");
+  // background-repeat: repeat-x;
+  background-size: contain;
+  transform-origin:bottom;
+  transform-style:preserve-3d;
+  transform:  perspective (120px) rotateX(20deg);
+  bottom: 100px;
+  
+}
+.railings{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height:90%;
+  // border: 2px solid rgb(102, 97, 57);
+  // background: #646464;
+  background-image: url("https://i.ibb.co/tKYYSX8/Untitled-3raillong.png");
+  background-repeat: repeat-x;
+  // background-size: contain;
+  transform-origin:bottom;
+  transform-style:preserve-3d;
+  background-position:90px;
+  // transform:  perspective (120px) rotateX(20deg);
+  bottom: 85px;
+  // transform: scaleY(100px);
+}
+.lines{
+  content:'';
+  position: absolute;
+  top:50%;
+  left:0;
+  // transform:  translateY(-30%);
+  width:100%;
+  transform: rotateX(2deg) perspective(190px);
+  height: 10px;
+  background: linear-gradient(90deg,#fff 10%,#fff 70%,#525252 70%,#525252 100%);
+  background-size:120px ;
+  
+}
 
