@@ -107,21 +107,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     function multiSkills() {
-        const des = document.querySelector(".des");
-    const ill = document.querySelector(".ill");
-    const cod = document.querySelector(".cod");
-    const ani = document.querySelector(".ani");
-        var divPos = des.getBoundingClientRect().right;
-        var screenPos = window.innerWidth / 1.2;
-        if (divPos < screenPos) {
-            des.className = 'progress_animated_des';
-            ill.className = 'progress_animated_ill';
-            cod.className = 'progress_animated_cod';
-            ani.className = 'progress_animated_ani';
-    
+        const des = document.querySelector('.des');
+        const ill = document.querySelector(".ill");
+        const cod = document.querySelector(".cod");
+        const ani = document.querySelector(".ani");
+        
+        // Only proceed if all elements exist
+        if (des && ill && cod && ani) {
+            const desRect = des.getBoundingClientRect();
+            var divPos = desRect.right;
+            var screenPos = window.innerWidth / 1.2;
+            
+            if (divPos < screenPos) {
+                des.className = 'progress_animated_des';
+                ill.className = 'progress_animated_ill';
+                cod.className = 'progress_animated_cod';
+                ani.className = 'progress_animated_ani';
+            }
         }
     }
-    window.addEventListener('DOMContentLoaded', multiSkills())
+    window.addEventListener('DOMContentLoaded', multiSkills);
 
     window.addEventListener('scroll', multiSkills);
     window.addEventListener('scroll', handleScrollAnimations);

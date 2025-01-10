@@ -20,19 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function checkScrollDirection(event) {
-        if (checkScrollDirectionIsUp(event)) {
-            console.log("Scrolling up");
-            girl_class.className = "viewer_back";
-            bettysCar.className = "bettyCarBack";
-        } else {
-            console.log("Scrolling down");
-            girl_class.className = "viewer";
-            bettysCar.className = "bettyCar";
+        const maxScroll = 90000; // Match your data-90000 value
+        const currentScroll = window.scrollX;
+        
+        if (currentScroll <= maxScroll) {
+            if (checkScrollDirectionIsUp(event)) {
+                girl_class.className = "viewer_back";
+                bettysCar.className = "bettyCarBack";
+            } else {
+                girl_class.className = "viewer";
+                bettysCar.className = "bettyCar";
+            }
         }
-
-        // The condition inside else if seems redundant because checkScrollDirectionIsUp(event)
-        // is already checked in the if statement above
-        // Removed for now; needs clarification on its purpose
     }
 
     window.addEventListener('wheel', checkScrollDirection);
@@ -233,6 +232,35 @@ window.onload = function () {
         document.location = "sample.html"
     }
 }
+
+// Add keyboard navigation for left/right arrows
+document.addEventListener('keydown', function(event) {
+    const currentScroll = window.scrollX;
+    const scrollAmount = window.innerWidth / 2;
+    const girl_class = document.getElementById("girlClass");
+    const bettysCar = document.querySelector(".bettyCar");
+
+    switch(event.key) {
+        case 'ArrowLeft':
+            // Change character direction for left
+            girl_class.className = "viewer_back";
+            bettysCar.className = "bettyCarBack";
+            window.scrollTo({
+                left: currentScroll - scrollAmount,
+                behavior: 'smooth'
+            });
+            break;
+        case 'ArrowRight':
+            // Change character direction for right
+            girl_class.className = "viewer";
+            bettysCar.className = "bettyCar";
+            window.scrollTo({
+                left: currentScroll + scrollAmount,
+                behavior: 'smooth'
+            });
+            break;
+    }
+});
 
 
 
