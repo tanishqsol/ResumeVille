@@ -1016,7 +1016,7 @@ align-items: center;
 .progress_animated_cod {
   -webkit-animation: anim 2s ease-out;
           animation: anim 2s ease-out;
-  width: 68%;
+  width: 90%;
 }
 
 .progress_animated_ani {
